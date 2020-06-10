@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: efa057aba5911744ebc67d9dbf769f49
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - FireballPrefab: {instanceID: 0}
+  - firePoint: {instanceID: 0}
+  - HealthBarPreFab: {fileID: 4951425790669641652, guid: 03f6d084a2d4c0d47b1577ff12d4b468,
+      type: 3}
+  - barPoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
