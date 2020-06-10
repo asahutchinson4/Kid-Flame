@@ -1,15 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class takeDamage : MonoBehaviour
 {
     public EnemyHealth health;
+    public Sprite Hurt;
+    public Sprite Local;
+   
+    float timer = 1f;
+    float delay = 1f;
+  
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D col)
     {
-        health.ReduceHealth(15f);
+
+    if (col.gameObject.CompareTag("Bullet"))
+        {
+            health.ReduceHealth(15f);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Hurt;
+            timer = delay;
+            return;
+        }
+        
     }
 
-    
+    void Update()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Local;
+        }
+    }
+
 }

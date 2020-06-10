@@ -9,6 +9,7 @@ public class EnemyHealth : ScriptableObject
     public float totalHealth = 100f;
     private float normalizedHealth = 1f;
 
+
     public float GetNormalizedHealth()
     {
         return normalizedHealth;
@@ -23,6 +24,7 @@ public class EnemyHealth : ScriptableObject
             currentHealth = 0;
         }
         normalizedHealth = currentHealth / totalHealth;
+
     }
 }
 

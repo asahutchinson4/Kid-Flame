@@ -288,6 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: 52acb6d415d84bc4e8e297884fd568ff, type: 2}
+  Hurt: {fileID: 21300000, guid: 97cef83e12c984a4bb311983859ba2db, type: 3}
+  Local: {fileID: 21300000, guid: 3a2084cb926813f488863498de07cd31, type: 3}
 --- !u!1 &60749952
 GameObject:
   m_ObjectHideFlags: 0
