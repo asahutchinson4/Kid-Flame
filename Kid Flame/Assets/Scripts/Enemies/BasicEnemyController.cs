@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 
@@ -20,12 +21,14 @@ public class BasicEnemyController : MonoBehaviour
     private float
         groundCheckDistance,
         wallCheckDistance,
+        carCheckDistance,
         movementSpeed;
 
     [SerializeField]
     private Transform
         groundCheck,
-        wallCheck;
+        wallCheck,
+        carCheck;
 
     [SerializeField]
     private LayerMask whatIsGround;
@@ -39,7 +42,8 @@ public class BasicEnemyController : MonoBehaviour
 
     private bool
         groundDetected,
-        wallDetected;
+        wallDetected,
+        carDetected;
 
     private GameObject alive;
     private Rigidbody2D aliveRb;
@@ -73,8 +77,9 @@ public class BasicEnemyController : MonoBehaviour
     {
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
         wallDetected = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        carDetected = Physics2D.Raycast(carCheck.position, transform.right, carCheckDistance, whatIsGround);
 
-        if(!groundDetected || wallDetected)
+        if(!groundDetected || wallDetected || carDetected)
         {
             flip();
         }
@@ -95,6 +100,7 @@ public class BasicEnemyController : MonoBehaviour
     {
         Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
+        Gizmos.DrawLine(carCheck.position, new Vector2(carCheck.position.x + carCheckDistance, carCheck.position.y));
     }
 
     public void carryHealthBar()
