@@ -19,7 +19,7 @@ public class takeDamage : MonoBehaviour
 
     if (col.gameObject.CompareTag("Bullet"))
         {
-            health.ReduceHealth(15f);
+            health.ReduceHealth(50f);
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Hurt;
             timer = delay;
             return;

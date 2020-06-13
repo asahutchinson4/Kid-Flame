@@ -41,6 +41,10 @@ public class Fireball : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+            if (col.gameObject.CompareTag("Killer"))
+            {
+            Destroy(gameObject);
+            }
+    }
     
 }

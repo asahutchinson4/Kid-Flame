@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Cloud
   - Car
+  - Killer
   layers:
   - Default
   - TransparentFX

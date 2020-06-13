@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour
@@ -7,8 +8,10 @@ public class HealthBar : MonoBehaviour
     private Transform bar;
     private SpriteRenderer renderer;
     public EnemyHealth health;
+    public FireFighterHealth fireHealth;
 
     private float barSize = 1f;
+    private float fireBarSize = 1f;
 
     // Start is called before the first frame update
     private void Start()
@@ -20,6 +23,18 @@ public class HealthBar : MonoBehaviour
 
     public void Update()
     {
+        fireBarSize = fireHealth.FireGetNormalizedHealth();
+        SetSize(fireBarSize);
+        if (fireBarSize < 0.3f)
+        {
+            SetColor(Color.red);
+        }
+
+        if (fireHealth.FirecurrentHealth == 0)
+        {
+            Destroy(this.gameObject);
+        }
+
         barSize = health.GetNormalizedHealth();
         SetSize(barSize);
         if (barSize < 0.3f)
@@ -31,6 +46,8 @@ public class HealthBar : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        
     }
 
     public void SetSize(float sizeNormalized)
