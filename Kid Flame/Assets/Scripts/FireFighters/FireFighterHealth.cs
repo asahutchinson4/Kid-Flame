@@ -7,7 +7,7 @@ public class FireFighterHealth : ScriptableObject
 {
     public float FirecurrentHealth = 100f;
     public float FiretotalHealth = 100f;
-    private float FirenormalizedHealth = 1f;
+    public float FirenormalizedHealth = 1f;
 
 
     public float FireGetNormalizedHealth()

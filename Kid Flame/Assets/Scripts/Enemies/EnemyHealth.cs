@@ -7,7 +7,7 @@ public class EnemyHealth : ScriptableObject
 {
     public float currentHealth = 100f;
     public float totalHealth = 100f;
-    private float normalizedHealth = 1f;
+    public float normalizedHealth = 1f;
 
 
     public float GetNormalizedHealth()
