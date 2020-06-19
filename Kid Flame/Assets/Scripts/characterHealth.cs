@@ -2,43 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-    [CreateAssetMenu(fileName = "characterHealth", menuName = "Data/characterHealth", order = 1)]
-    public class characterHealth : ScriptableObject
-    {
-        public EnemyHealth health;
-        public FireFighterHealth fireHealth;
+[CreateAssetMenu(fileName = "characterHealth", menuName = "Data/characterHealth", order = 1)]
+public class characterHealth : ScriptableObject
+{
+    public float currentHealth = 100f;
+    public float totalHealth = 100f;
+    public float normalizedHealth = 1f;
 
 
     public float GetNormalizedHealth()
     {
-        return health.normalizedHealth;
-        return fireHealth.FirenormalizedHealth;
+        return normalizedHealth;
+        // This second return statement can never be executed. The method will exit at the first return.
+        //return fireHealth.FirenormalizedHealth;
     }
 
     //Reduces current health by amount. Minimum health is zero.
     public void ReduceHealth(float amount)
     {
-        health.currentHealth -= amount;
-        if (health.currentHealth < 0)
+        currentHealth -= amount;
+        if (currentHealth < 0)
         {
-            health.currentHealth = 0;
+            currentHealth = 0;
         }
-        health.normalizedHealth = health.currentHealth / health.totalHealth;
+        normalizedHealth = currentHealth / totalHealth;
 
     }
 
-    //Reduces current health by amount. Minimum health is zero.
-    public void FireReduceHealth(float amount)
-    {
-        fire.FirecurrentHealth -= amount;
-        if (fireHealth.FirecurrentHealth < 0)
-        {
-            fireHealth.FirecurrentHealth = 0;
-        }
-        fireHealth.FirenormalizedHealth = fireHealth.FirecurrentHealth / fireHealth.FiretotalHealth;
-
-    }
+ 
 }
 
-    
+
 
