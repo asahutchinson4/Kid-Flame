@@ -12,8 +12,10 @@ public class BasicEnemyController : MonoBehaviour
         Dead
     }
     
-    public GameObject healthBar;
-    public Transform barPoint;
+    //public GameObject healthBar;
+    //public Transform barPoint;
+    public characterHealth healthData;
+    public HealthBar1 healthBar;
 
     private State currentState;
 
@@ -59,7 +61,9 @@ public class BasicEnemyController : MonoBehaviour
 
         facingDirection = 1;
 
-        carryHealthBar();
+        //carryHealthBar();
+
+        //healthBar.health = healthData;
     }
 
     private void Update()
@@ -71,7 +75,7 @@ public class BasicEnemyController : MonoBehaviour
                 break;
         }
 
-        healthBar.transform.position = barPoint.transform.position;
+        //healthBar.transform.position = barPoint.transform.position;
     }
 
     private void UpdateMovingState()
@@ -104,8 +108,8 @@ public class BasicEnemyController : MonoBehaviour
         Gizmos.DrawLine(carCheck.position, new Vector2(carCheck.position.x + carCheckDistance, carCheck.position.y));
     }
 
-    public void carryHealthBar()
-    {
-        healthBar = Instantiate(healthBar, barPoint.position, barPoint.rotation);
-    }
+    //public void carryHealthBar()
+    //{
+        //healthBar = Instantiate(healthBar, barPoint.position, barPoint.rotation);
+    //}
 }

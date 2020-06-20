@@ -15,7 +15,10 @@ public class characterCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(healthData.currentHealth == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D col)

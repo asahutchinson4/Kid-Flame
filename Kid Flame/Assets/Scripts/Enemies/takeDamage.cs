@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class takeDamage : MonoBehaviour
 {
-    public EnemyHealth health;
+    public characterHealth health;
     public Sprite Hurt;
     public Sprite Local;
    

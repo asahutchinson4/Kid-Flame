@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd57bbe7a6d19214198edb28bcbd0aee, type: 3}
   m_Name: CarHealth
   m_EditorClassIdentifier: 
-  currentHealth: 10
+  currentHealth: 60
   totalHealth: 100
-  normalizedHealth: 0.1
+  normalizedHealth: 0.6

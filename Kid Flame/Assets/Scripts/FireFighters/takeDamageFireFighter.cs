@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class takeDamageFireFighter : MonoBehaviour
 {
-    public FireFighterHealth FireHealth;
+    public characterHealth FireHealth;
     public Sprite FireFighterHurt;
     public Sprite FireFighter;
 
@@ -17,7 +17,7 @@ public class takeDamageFireFighter : MonoBehaviour
 
         if (col.gameObject.CompareTag("Bullet"))
         {
-            FireHealth.FireReduceHealth(15f);
+            FireHealth.ReduceHealth(15f);
             this.gameObject.GetComponent<SpriteRenderer>().sprite = FireFighterHurt;
             timer = delay;
             return;
@@ -33,7 +33,7 @@ public class takeDamageFireFighter : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().sprite = FireFighter;
         }
 
-        if (FireHealth.FirecurrentHealth == 0)
+        if (FireHealth.currentHealth == 0)
         {
             Destroy(this.gameObject);
         }
