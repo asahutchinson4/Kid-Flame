@@ -10,13 +10,12 @@ public class FireFighterController : MonoBehaviour
     private enum State
     {
         Moving
-
     }
 
-    //public GameObject healthBar;
-    //public Transform barPoint;
     public characterHealth healthData;
     public HealthBar1 healthBar;
+    public GameObject WaterPrefab;
+    public Transform sprayPoint;
 
     private State currentState;
 
@@ -41,9 +40,10 @@ public class FireFighterController : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsKidFlame;
 
-
-    private int
+    public int
         facingDirection;
+    //private int
+        //facingDirection;
 
 
     private Vector2 movement;
@@ -66,8 +66,6 @@ public class FireFighterController : MonoBehaviour
 
         facingDirection = 1;
 
-        //carryHealthBar();
-
     }
 
     private void Update()
@@ -78,8 +76,6 @@ public class FireFighterController : MonoBehaviour
                 UpdateMovingState();
                 break;
         }
-
-       // healthBar.transform.position = barPoint.transform.position;
     }
 
     private void UpdateMovingState()
@@ -91,8 +87,8 @@ public class FireFighterController : MonoBehaviour
 
         if (kidDetected)
         {
-            UnityEngine.Debug.Log("Hit");
             stop();
+            sprayWater();
         }
 
         else if (!groundDetected || wallDetected || carDetected)
@@ -104,6 +100,11 @@ public class FireFighterController : MonoBehaviour
             movement.Set(movementSpeed * facingDirection, fireManRb.velocity.y);
             fireManRb.velocity = movement;
         }
+    }
+
+    private void sprayWater()
+    {
+       Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
     }
 
     private void flip()
@@ -125,9 +126,4 @@ public class FireFighterController : MonoBehaviour
         Gizmos.DrawLine(carCheck.position, new Vector2(carCheck.position.x + carCheckDistance, carCheck.position.y));
         Gizmos.DrawLine(kidCheck.position, new Vector2(kidCheck.position.x + kidCheckDistance, kidCheck.position.y));
     }
-
-    //public void carryHealthBar()
-    //{
-        //healthBar = Instantiate(healthBar, barPoint.position, barPoint.rotation);
-    //}
 }
