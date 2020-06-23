@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using System.Threading;
 using UnityEngine;
 
 public class FireFighterController : MonoBehaviour
@@ -12,10 +13,14 @@ public class FireFighterController : MonoBehaviour
         Moving
     }
 
+    public float interval;
+    float nextShot = 0.0f;
+
     public characterHealth healthData;
     public HealthBar1 healthBar;
     public GameObject WaterPrefab;
     public Transform sprayPoint;
+    public waterBall water;
 
     private State currentState;
 
@@ -40,29 +45,33 @@ public class FireFighterController : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsKidFlame;
 
-    public int
-        facingDirection;
+    
     //private int
         //facingDirection;
 
+    public int
+        facingDirection;
 
     private Vector2 movement;
- 
+
     private bool
         groundDetected,
         wallDetected,
-        carDetected,
-        kidDetected;
+        carDetected;
+
+    public bool kidDetected;
 
     private GameObject fireMan;
     private Rigidbody2D fireManRb;
     private Animator fireManAnim;
+
 
     private void Start()
     {
         fireMan = transform.Find("FireFighter").gameObject;
         fireManRb = fireMan.GetComponent<Rigidbody2D>();
         fireManAnim = fireMan.GetComponent<Animator>();
+
 
         facingDirection = 1;
 
@@ -76,6 +85,7 @@ public class FireFighterController : MonoBehaviour
                 UpdateMovingState();
                 break;
         }
+        
     }
 
     private void UpdateMovingState()
@@ -87,8 +97,20 @@ public class FireFighterController : MonoBehaviour
 
         if (kidDetected)
         {
+            
             stop();
-            sprayWater();
+
+            if (Time.time >= nextShot && facingDirection == 1)
+            {
+                nextShot = Time.time + interval;
+                sprayWaterRight();
+            }
+
+            else if (Time.time >= nextShot && facingDirection == -1)
+            {
+                nextShot = Time.time + interval;
+                sprayWaterLeft();
+            }
         }
 
         else if (!groundDetected || wallDetected || carDetected)
@@ -102,9 +124,16 @@ public class FireFighterController : MonoBehaviour
         }
     }
 
-    private void sprayWater()
+    private void sprayWaterRight()
     {
        Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
+       //water.rb.velocity = new Vector2(water.speed, 0);
+    }
+
+    private void sprayWaterLeft()
+    {
+        Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
+        //water.rb.velocity = new Vector2(water.speed * -1, 0);
     }
 
     private void flip()

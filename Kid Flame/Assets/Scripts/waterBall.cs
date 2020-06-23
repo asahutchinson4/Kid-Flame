@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class waterBall : MonoBehaviour
 {
-    public float speed = 25.0f;
-    private Rigidbody2D rb;
-    public FireFighterController fireMan;
+    public float speed;
+    public Rigidbody2D rb;
+    public FireFighterController fire;
  
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        if (fireMan.facingDirection == 1f)
+        rb.velocity = new Vector2(speed, 0);
+
+       
+    }
+
+    void FixedUpdate()
+    {
+        if (fire.facingDirection == 1)
         {
             rb.velocity = new Vector2(speed, 0);
         }
-        else
-        {
-            rb.velocity = new Vector2(speed * -1f, 0);
-        }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else if (fire.facingDirection == -1)
+        {
+            rb.velocity = new Vector2(speed * -1, 0);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)

@@ -7,16 +7,24 @@ public class spotted : MonoBehaviour
 {
     public Sprite FireFighter;
     public Sprite FireFighterSpotted;
+    public FireFighterController control;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float timer = 10f;
+    float delay = 5f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer -= Time.deltaTime;
+        if (control.kidDetected && Input.GetKeyDown(KeyCode.F))
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = FireFighterSpotted;
+            timer = delay;
+            return;
+        }
+        if(timer <= 0)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = FireFighter;
+        }
     }
 }
