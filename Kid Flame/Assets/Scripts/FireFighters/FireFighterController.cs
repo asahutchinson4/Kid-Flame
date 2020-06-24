@@ -100,16 +100,10 @@ public class FireFighterController : MonoBehaviour
             
             stop();
 
-            if (Time.time >= nextShot && facingDirection == 1)
+            if (Time.time >= nextShot)
             {
                 nextShot = Time.time + interval;
-                sprayWaterRight();
-            }
-
-            else if (Time.time >= nextShot && facingDirection == -1)
-            {
-                nextShot = Time.time + interval;
-                sprayWaterLeft();
+                sprayWater();
             }
         }
 
@@ -124,16 +118,9 @@ public class FireFighterController : MonoBehaviour
         }
     }
 
-    private void sprayWaterRight()
-    {
-       Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
-       //water.rb.velocity = new Vector2(water.speed, 0);
-    }
-
-    private void sprayWaterLeft()
+    private void sprayWater()
     {
         Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
-        //water.rb.velocity = new Vector2(water.speed * -1, 0);
     }
 
     private void flip()

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class waterBall : MonoBehaviour
@@ -12,21 +13,19 @@ public class waterBall : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(speed, 0);
-
-       
+        rb.velocity = new Vector2(0f, 0f);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (fire.facingDirection == 1)
         {
-            rb.velocity = new Vector2(speed, 0);
+            rb.velocity = new Vector2(speed, 0f);
         }
 
-        else if (fire.facingDirection == -1)
+        if (fire.facingDirection == -1)
         {
-            rb.velocity = new Vector2(speed * -1, 0);
+            rb.velocity = new Vector2(speed * -1f, 0f);
         }
     }
 
