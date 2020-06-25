@@ -43,8 +43,13 @@ public class Fireball : MonoBehaviour
             }
             if (col.gameObject.CompareTag("Killer"))
             {
-            Destroy(gameObject);
+                Destroy(gameObject);
             }
+            if (col.gameObject.CompareTag("Water"))
+            {
+                Destroy(gameObject);
+            }
+
     }
-    
+
 }

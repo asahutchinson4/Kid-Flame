@@ -6,9 +6,11 @@ using UnityEngine;
 public class HealthBar1 : MonoBehaviour
 {
     private Transform bar;
-    private SpriteRenderer renderer;
+    private static SpriteRenderer renderer;
     public characterHealth health;
-    
+    public FireFighterController fire;
+    private static int direction;
+
 
     private float barSize = 1f;
     private float fireBarSize = 1f;
@@ -19,6 +21,10 @@ public class HealthBar1 : MonoBehaviour
         bar = transform.Find("Bar");
         renderer = bar.Find("BarSprite").GetComponent<SpriteRenderer>();
         SetColor(Color.green);
+
+        direction = FireFighterController.facingDirection;
+
+        //renderer.flipX = false;
     }
 
     public void Update()
@@ -36,16 +42,19 @@ public class HealthBar1 : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        //fireBarSize = fireHealth.FireGetNormalizedHealth();
-        //SetSize(fireBarSize);
-        //if (fireBarSize < 0.3f)
+        //if(direction == 1)
         //{
-        //    SetColor(Color.red);
+            //renderer.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        //}
+        
+        //if(direction == -1)
+        //{
+           // renderer.transform.localRotation = Quaternion.Euler(0, 180, 0);
         //}
 
-        //if (fireHealth.FirecurrentHealth == 0)
+        //if(renderer.flipX == true)
         //{
-        //    Destroy(this.gameObject);
+            //renderer.flipX = true;
         //}
 
     }

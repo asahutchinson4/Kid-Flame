@@ -10,6 +10,7 @@ TagManager:
   - Car
   - Killer
   - Kid Flame
+  - Water
   layers:
   - Default
   - TransparentFX

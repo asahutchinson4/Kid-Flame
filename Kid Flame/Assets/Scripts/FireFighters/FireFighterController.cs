@@ -46,10 +46,7 @@ public class FireFighterController : MonoBehaviour
     private LayerMask whatIsKidFlame;
 
     
-    //private int
-        //facingDirection;
-
-    public int
+    public static int
         facingDirection;
 
     private Vector2 movement;
@@ -110,6 +107,7 @@ public class FireFighterController : MonoBehaviour
         else if (!groundDetected || wallDetected || carDetected)
         {
             flip();
+            //healthBar.renderer.flipX;
         }
         else
         {

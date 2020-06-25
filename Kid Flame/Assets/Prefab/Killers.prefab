@@ -276,8 +276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2978643dddd037429990e31bce49f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interval: 0
   healthData: {fileID: 0}
   healthBar: {fileID: 0}
+  WaterPrefab: {fileID: 0}
+  sprayPoint: {fileID: 0}
+  water: {fileID: 0}
   groundCheckDistance: 0.5
   wallCheckDistance: 0.1
   carCheckDistance: 0.1
@@ -292,7 +296,8 @@ MonoBehaviour:
     m_Bits: 256
   whatIsKidFlame:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
+  kidDetected: 0
 --- !u!1 &8515961939030787581
 GameObject:
   m_ObjectHideFlags: 0
