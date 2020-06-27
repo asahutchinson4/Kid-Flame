@@ -8,20 +8,22 @@ public class HealthBar : MonoBehaviour
     private Transform bar;
     private SpriteRenderer renderer;
     public characterHealth health;
-    //public FireFighterHealth fireHealth;
+    public FireFighterController fire;
+    private static int face;
 
     private float barSize = 1f;
-    private float fireBarSize = 1f;
 
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
         bar = transform.Find("Bar");
         renderer = bar.Find("BarSprite").GetComponent<SpriteRenderer>();
         SetColor(Color.green);
+
+        face = FireFighterController.facingDirection;
     }
 
-    public void Update()
+    void Update()
     {
        
         barSize = health.GetNormalizedHealth();
@@ -36,18 +38,23 @@ public class HealthBar : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        //fireBarSize = fireHealth.FireGetNormalizedHealth();
-        //SetSize(fireBarSize);
-        //if (fireBarSize < 0.3f)
-        //{
-        //    SetColor(Color.red);
-        //}
 
-        //if (fireHealth.FirecurrentHealth == 0)
-        //{
-        //    Destroy(this.gameObject);
-        //}
+        checkBar();
+    }
 
+    private void checkBar()
+    {
+        if (face == 1)
+        {
+            
+            UnityEngine.Debug.Log("faceright");
+        }
+
+        if (face == -1)
+        {
+            
+            UnityEngine.Debug.Log("faceleft");
+        }
     }
 
     public void SetSize(float sizeNormalized)

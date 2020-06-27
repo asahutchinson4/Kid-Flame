@@ -107,7 +107,6 @@ public class FireFighterController : MonoBehaviour
         else if (!groundDetected || wallDetected || carDetected)
         {
             flip();
-            //healthBar.renderer.flipX;
         }
         else
         {

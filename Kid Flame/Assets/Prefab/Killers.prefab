@@ -276,21 +276,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2978643dddd037429990e31bce49f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0
+  interval: 0.1
   healthData: {fileID: 0}
   healthBar: {fileID: 0}
-  WaterPrefab: {fileID: 0}
-  sprayPoint: {fileID: 0}
+  WaterPrefab: {fileID: 5093866497387144465, guid: 4514f47d92502f345bdc1b5a8fcf3c9d,
+    type: 3}
+  sprayPoint: {fileID: 2871851800405000968}
   water: {fileID: 0}
   groundCheckDistance: 0.5
   wallCheckDistance: 0.1
   carCheckDistance: 0.1
-  kidCheckDistance: 0
+  kidCheckDistance: 14
   movementSpeed: 5
   groundCheck: {fileID: 8515961940729999836}
   wallCheck: {fileID: 8515961939030787580}
   carCheck: {fileID: 8515961939840006447}
-  kidCheck: {fileID: 0}
+  kidCheck: {fileID: 597287201660130553}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
