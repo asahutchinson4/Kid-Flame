@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
 
+/*
+ * Decides the direction the water projectile will go,
+ * the speed of it and when it will be destroyed.
+ */
 public class waterBall : MonoBehaviour
 {
     public float speed;
@@ -12,7 +16,11 @@ public class waterBall : MonoBehaviour
     private static int direction;
 
 
-    // Start is called before the first frame update
+    /*
+     * Start is called before the first frame update.
+     * Assigns rigidbody, velocity and object reference
+     * facingDirection.
+     */
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -22,6 +30,12 @@ public class waterBall : MonoBehaviour
         direction = FireFighterController.facingDirection;
     }
 
+    /*
+     * Update is called once per frame.
+     * If firefighter is facing right then he
+     * shoots to the right and if he is facing
+     * left then he shoots to the left.
+     */
     void Update()
     { 
 
@@ -38,6 +52,10 @@ public class waterBall : MonoBehaviour
         }
     }
 
+    /*
+     * If the tag matches then the water projectile will
+     * be destroyed.
+     */
     private void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Kid Flame"))

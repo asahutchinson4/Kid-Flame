@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * Loads scene when button is clicked.
+ */
 public class LoadSceneOnClick : MonoBehaviour
 {
     public void LoadSceneByIndex(int index)

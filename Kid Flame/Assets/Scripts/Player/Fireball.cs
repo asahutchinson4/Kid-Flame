@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Decides the direction the fireball will go,
+ * the speed of it and when it will be destroyed.
+ */
 public class Fireball : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
 
-    // Start is called before the first frame update
+    /*
+     * Start is called before the first frame update.
+     * Assigns rigidbody and velocity.
+     */
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -17,7 +24,10 @@ public class Fireball : MonoBehaviour
 
 
 
-    // Update is called once per frame
+    /* 
+     * Update is called once per frame.
+     * If the fireball is off screen then it is destroyed.
+     */
     void FixedUpdate()
     {
 
@@ -26,6 +36,10 @@ public class Fireball : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+        /* If the tag matches then the fireball will
+        *  be destroyed.
+        */
        private void OnCollisionEnter2D(Collision2D col)
         {
             if (col.gameObject.CompareTag("Car"))

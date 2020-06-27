@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+ * Base for all character health. All scriptable objects
+ * for characters are derived from this script.
+ */
 [CreateAssetMenu(fileName = "characterHealth", menuName = "Data/characterHealth", order = 1)]
 public class characterHealth : ScriptableObject
 {
@@ -9,6 +14,9 @@ public class characterHealth : ScriptableObject
     public float totalHealth = 100f;
     public float normalizedHealth = 1f;
 
+    /*
+     * Getter for normalized health
+     */
     public float GetNormalizedHealth()
     {
         return normalizedHealth;
@@ -16,7 +24,9 @@ public class characterHealth : ScriptableObject
         //return fireHealth.FirenormalizedHealth;
     }
 
-    //Reduces current health by amount. Minimum health is zero.
+    /*
+     * Reduces current health by amount. Minimum health is zero.
+     */
     public void ReduceHealth(float amount)
     {
         currentHealth -= amount;

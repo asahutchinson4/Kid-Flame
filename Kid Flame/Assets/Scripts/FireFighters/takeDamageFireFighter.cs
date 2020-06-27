@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Allows firefighters to take damage
+ */
 public class takeDamageFireFighter : MonoBehaviour
 {
     public characterHealth FireHealth;
@@ -11,7 +14,11 @@ public class takeDamageFireFighter : MonoBehaviour
     float timer = 1f;
     float delay = 1f;
 
-
+    /*
+     * If a bullet collides with firefighter then
+     * he will lose 15 health points and will
+     * display hurt sprite.
+     */
     public void OnCollisionEnter2D(Collision2D col)
     {
 
@@ -25,6 +32,12 @@ public class takeDamageFireFighter : MonoBehaviour
 
     }
 
+    /*
+     * Update is called once per frame.
+     * If timer is done then firefighter will switch
+     * back to idle sprite. If health equals 0
+     * then firefighter dissapears.
+     */
     void Update()
     {
         timer -= Time.deltaTime;

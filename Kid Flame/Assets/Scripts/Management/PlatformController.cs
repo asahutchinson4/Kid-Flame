@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Controls movement and boundaries of moving platforms.
+ */
 public class PlatformController : MonoBehaviour
 {
     float dirX, moveSpeed = 1f;
@@ -11,6 +14,10 @@ public class PlatformController : MonoBehaviour
     private float xLimit;
     private float negxLimit;
 
+    /*
+     * Start is called before the first frame update.
+     * Assigns limits.
+     */
     void Start()
     {
         initialX = transform.position.x;
@@ -19,7 +26,11 @@ public class PlatformController : MonoBehaviour
     }
 
 
-    // Update is called once per frame
+    /*
+     * Update is called once per frame.
+     * Updates how far moving platforms can go before
+     * they need to head the other direction.
+     */
     void Update()
     {
         if (transform.position.x > xLimit)

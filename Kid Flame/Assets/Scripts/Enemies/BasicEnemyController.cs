@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-
-// This script controls the local's movement and checkers.
-
+/*
+ * This script controls the local's movement and checkers.
+ */
 public class BasicEnemyController : MonoBehaviour
 {
 
@@ -15,10 +15,8 @@ public class BasicEnemyController : MonoBehaviour
         Dead
     }
     
-    
     public characterHealth healthData;
-    public HealthBar1 healthBar;
-
+    
     private State currentState;
 
     [SerializeField]
@@ -37,11 +35,9 @@ public class BasicEnemyController : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsGround;
 
-
     private int
         facingDirection;
         
-
     private Vector2 movement;
 
     private bool
@@ -55,13 +51,13 @@ public class BasicEnemyController : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+
     /*
+     * Start is called before the first frame update.
      * Finds alive gameobject and gets rigidbody
      * and animator components. Sets facing direction
      * to the right.
      */
-
     private void Start()
     {
         alive = transform.Find("Alive").gameObject;
@@ -73,9 +69,10 @@ public class BasicEnemyController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    //Just updates state to moving.
-
+    /*
+     * Update is called once per frame.
+     * Just updates state to moving.
+     */
     private void Update()
     {
         switch (currentState)
@@ -91,8 +88,8 @@ public class BasicEnemyController : MonoBehaviour
      * Ground, wall and car detecters. If local
      * detects any of these then he will flip
      * and start heading the other direction.
+     * If not any then he continues.
      */
-
     private void UpdateMovingState()
     {
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
@@ -114,7 +111,6 @@ public class BasicEnemyController : MonoBehaviour
      * Changes facing direction and rotates local
      * 180 degrees.
      */
-
     private void flip()
     {
         facingDirection *= -1;
@@ -124,7 +120,6 @@ public class BasicEnemyController : MonoBehaviour
     /*
      * Draws line used for detection
      */
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));

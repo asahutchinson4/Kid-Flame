@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * IMPORTANT: Added old shooting motion script to this one.
+ * Allows kid flame to take damage but also the shooting
+ * sprite when he shoots fireballs,
+ */
 public class takeDamagePlayer : MonoBehaviour
 {
 
@@ -13,6 +18,11 @@ public class takeDamagePlayer : MonoBehaviour
     float timer = 1f;
     float delay = 1f;
 
+    /*
+     * If a water projectile collides with kidflame then
+     * he will lose 5 health points and will
+     * display hurt sprite.
+     */
     public void OnCollisionEnter2D(Collision2D col)
     {
 
@@ -25,6 +35,13 @@ public class takeDamagePlayer : MonoBehaviour
         }
     }
    
+    /*
+     * Part of old shooting motion script.
+     * If he is shooting a fireball then it will display
+     * shooting sprite and play shooting sound. If timer is done 
+     * then it will go back to idle sprite. If health equals 0
+     * then kid flame dies.
+     */
     void Update()
     {
         timer -= Time.deltaTime;
