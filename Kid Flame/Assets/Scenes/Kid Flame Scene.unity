@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 619856873}
   - component: {fileID: 619856872}
   - component: {fileID: 619856874}
+  - component: {fileID: 619856875}
   m_Layer: 10
   m_Name: Kid Flame
   m_TagString: Kid Flame
@@ -668,13 +669,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619856868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e89822e21ecdabe42b9eefb0edf23b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Shot: {fileID: 21300000, guid: 30438aaae5104d14281c29137f4f2498, type: 3}
   Idle2: {fileID: 21300000, guid: ad8fcd1fa779fd34896b778290205f66, type: 3}
+--- !u!114 &619856875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619856868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea3a0f077c4c87478b8d199ca4b7dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: e256626ce19b04242b99d2fc5535c61d, type: 2}
+  Shot: {fileID: 21300000, guid: 30438aaae5104d14281c29137f4f2498, type: 3}
+  Idle2: {fileID: 21300000, guid: ad8fcd1fa779fd34896b778290205f66, type: 3}
+  Cold: {fileID: 21300000, guid: a44a6587e7c57b043a59462997b38e5b, type: 3}
 --- !u!1 &620322957
 GameObject:
   m_ObjectHideFlags: 0
