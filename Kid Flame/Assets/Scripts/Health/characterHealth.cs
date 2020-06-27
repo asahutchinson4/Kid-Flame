@@ -12,7 +12,7 @@ public class characterHealth : ScriptableObject
     public float GetNormalizedHealth()
     {
         return normalizedHealth;
-        // This second return statement can never be executed. The method will exit at the first return.
+        // Note from Dr. Branton: This second return statement can never be executed. The method will exit at the first return.
         //return fireHealth.FirenormalizedHealth;
     }
 

@@ -4,16 +4,18 @@ using System.Security.Cryptography;
 using UnityEngine;
 
 
+// This script controls the local's movement and checkers.
+
 public class BasicEnemyController : MonoBehaviour
 {
+
    private enum State
     {
         Moving,
         Dead
     }
     
-    //public GameObject healthBar;
-    //public Transform barPoint;
+    
     public characterHealth healthData;
     public HealthBar1 healthBar;
 
@@ -52,6 +54,14 @@ public class BasicEnemyController : MonoBehaviour
     private Animator aliveAnim;
 
 
+
+    // Start is called before the first frame update
+    /*
+     * Finds alive gameobject and gets rigidbody
+     * and animator components. Sets facing direction
+     * to the right.
+     */
+
     private void Start()
     {
         alive = transform.Find("Alive").gameObject;
@@ -61,10 +71,10 @@ public class BasicEnemyController : MonoBehaviour
 
         facingDirection = 1;
 
-        //carryHealthBar();
-
-        //healthBar.health = healthData;
     }
+
+    // Update is called once per frame
+    //Just updates state to moving.
 
     private void Update()
     {
@@ -75,8 +85,13 @@ public class BasicEnemyController : MonoBehaviour
                 break;
         }
 
-        //healthBar.transform.position = barPoint.transform.position;
     }
+
+    /*
+     * Ground, wall and car detecters. If local
+     * detects any of these then he will flip
+     * and start heading the other direction.
+     */
 
     private void UpdateMovingState()
     {
@@ -95,11 +110,20 @@ public class BasicEnemyController : MonoBehaviour
         }
     }
 
+    /*
+     * Changes facing direction and rotates local
+     * 180 degrees.
+     */
+
     private void flip()
     {
         facingDirection *= -1;
         alive.transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
+    /*
+     * Draws line used for detection
+     */
 
     private void OnDrawGizmos()
     {
@@ -107,9 +131,4 @@ public class BasicEnemyController : MonoBehaviour
         Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         Gizmos.DrawLine(carCheck.position, new Vector2(carCheck.position.x + carCheckDistance, carCheck.position.y));
     }
-
-    //public void carryHealthBar()
-    //{
-        //healthBar = Instantiate(healthBar, barPoint.position, barPoint.rotation);
-    //}
 }
