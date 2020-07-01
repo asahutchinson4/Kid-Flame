@@ -93,7 +93,6 @@ public class FireFighterController : MonoBehaviour
                 UpdateMovingState();
                 break;
         }
-        
     }
 
     /*

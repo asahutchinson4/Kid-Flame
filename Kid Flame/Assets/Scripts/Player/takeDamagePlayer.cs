@@ -40,7 +40,8 @@ public class takeDamagePlayer : MonoBehaviour
      * If he is shooting a fireball then it will display
      * shooting sprite and play shooting sound. If timer is done 
      * then it will go back to idle sprite. If health equals 0
-     * then kid flame dies.
+     * then kid flame dies. If kid flame's health gets below 40%
+     * then he will stay blue.
      */
     void Update()
     {
@@ -62,6 +63,11 @@ public class takeDamagePlayer : MonoBehaviour
         if (health.currentHealth == 0)
         {
             Destroy(this.gameObject);
+        }
+
+        if (health.normalizedHealth < .4f)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Cold;
         }
     }
 
