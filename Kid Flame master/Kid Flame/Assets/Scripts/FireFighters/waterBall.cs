@@ -27,7 +27,7 @@ public class waterBall : MonoBehaviour
         shooting = new Vector2(speed, 0f);
         rb.velocity = shooting;
 
-        fire = GameObject.Find("Killers").GetComponent<FireFighterController>();
+        fire = GameObject.Find("FireFighter").GetComponent<FireFighterController>();
         direction = fire.facingDirection;
     }
 

@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 8515961938661700786}
   - component: {fileID: 8515961938661700787}
   - component: {fileID: 8515961938661700788}
+  - component: {fileID: 1810283237919377482}
   m_Layer: 0
   m_Name: FireFighter
   m_TagString: Killer
@@ -232,6 +233,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1810283237919377482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515961938661700791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2978643dddd037429990e31bce49f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 0.1
+  healthData: {fileID: 0}
+  WaterPrefab: {fileID: 5093866497387144465, guid: 4514f47d92502f345bdc1b5a8fcf3c9d,
+    type: 3}
+  sprayPoint: {fileID: 2871851800405000968}
+  water: {fileID: 0}
+  groundCheckDistance: 0.5
+  wallCheckDistance: 0.1
+  carCheckDistance: 0.1
+  kidCheckDistance: 14
+  movementSpeed: 5
+  groundCheck: {fileID: 8515961940729999836}
+  wallCheck: {fileID: 8515961939030787580}
+  carCheck: {fileID: 8515961939840006447}
+  kidCheck: {fileID: 597287201660130553}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsKidFlame:
+    serializedVersion: 2
+    m_Bits: 1024
+  facingDirection: 0
+  kidDetected: 0
 --- !u!1 &8515961938887812540
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8515961938887812538}
   - component: {fileID: 8515961938887812539}
+  - component: {fileID: 5830461788904580133}
   m_Layer: 0
   m_Name: Killers
   m_TagString: Killer
@@ -271,14 +308,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8515961938887812540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2978643dddd037429990e31bce49f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0.1
   healthData: {fileID: 0}
-  healthBar: {fileID: 0}
   WaterPrefab: {fileID: 5093866497387144465, guid: 4514f47d92502f345bdc1b5a8fcf3c9d,
     type: 3}
   sprayPoint: {fileID: 2871851800405000968}
@@ -298,7 +334,23 @@ MonoBehaviour:
   whatIsKidFlame:
     serializedVersion: 2
     m_Bits: 1024
+  facingDirection: 0
   kidDetected: 0
+--- !u!114 &5830461788904580133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515961938887812540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bccf6dbbc0ba04897a3a8b11328127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  rb: {fileID: 0}
+  fire: {fileID: 0}
 --- !u!1 &8515961939030787581
 GameObject:
   m_ObjectHideFlags: 0

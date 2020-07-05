@@ -14,6 +14,7 @@ public class takeDamagePlayer : MonoBehaviour
     public Sprite Shot;
     public Sprite Idle2;
     public Sprite Cold;
+    public Sprite ColdShot;
 
     float timer = 1f;
     float delay = 1f;
@@ -47,7 +48,7 @@ public class takeDamagePlayer : MonoBehaviour
     {
         timer -= Time.deltaTime;
         
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && health.normalizedHealth >= .4f)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Shot;
             SoundManager.playFireballSound();
@@ -55,19 +56,27 @@ public class takeDamagePlayer : MonoBehaviour
             return;
         }
 
-        if (timer <= 0)
+        if (timer <= 0 && health.normalizedHealth >= .4f)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Idle2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) && health.normalizedHealth < .4f)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = ColdShot;
+            SoundManager.playFireballSound();
+            timer = delay;
+            return;
+        }
+
+        if (timer <=0 && health.normalizedHealth < .4f)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = Cold;
         }
 
         if (health.currentHealth == 0)
         {
             Destroy(this.gameObject);
-        }
-
-        if (health.normalizedHealth < .4f)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = Cold;
         }
     }
 

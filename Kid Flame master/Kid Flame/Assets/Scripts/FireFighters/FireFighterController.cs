@@ -72,7 +72,7 @@ public class FireFighterController : MonoBehaviour
 
     private void Start()
     {
-        fireMan = transform.Find("FireFighter").gameObject;
+        fireMan = this.gameObject;
         fireManRb = fireMan.GetComponent<Rigidbody2D>();
         fireManAnim = fireMan.GetComponent<Animator>();
 
