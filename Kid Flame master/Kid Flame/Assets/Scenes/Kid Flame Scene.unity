@@ -387,7 +387,7 @@ MonoBehaviour:
     m_Bits: 256
   whatIsKidFlame:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   facingDirection: 1
   kidDetected: 0
 --- !u!1001 &115306558
@@ -3115,7 +3115,7 @@ PrefabInstance:
     - target: {fileID: 597287201660130553, guid: 372904c0d32a3c743bfe74619c5c23d4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.8
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 597287201660130553, guid: 372904c0d32a3c743bfe74619c5c23d4,
         type: 3}
@@ -3132,6 +3132,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.12
       objectReference: {fileID: 0}
+    - target: {fileID: 6075630004255067455, guid: 372904c0d32a3c743bfe74619c5c23d4,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fe34a4673d9fea429a9868a52ce53b1,
+        type: 2}
     - target: {fileID: 8515961938661700789, guid: 372904c0d32a3c743bfe74619c5c23d4,
         type: 3}
       propertyPath: FireHealth
@@ -3262,9 +3268,10 @@ PrefabInstance:
       value: Killers
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 458915704837587725, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
+    - {fileID: 0}
     - {fileID: 5830461788904580133, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
     - {fileID: 1810283237919377482, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
+    - {fileID: 8515961938887812539, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
 --- !u!1 &1690792100
 GameObject:
@@ -3587,6 +3594,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 597287201660130553, guid: 372904c0d32a3c743bfe74619c5c23d4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 597287201660130553, guid: 372904c0d32a3c743bfe74619c5c23d4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810283237919377482, guid: 372904c0d32a3c743bfe74619c5c23d4,
+        type: 3}
+      propertyPath: healthData
+      value: 
+      objectReference: {fileID: 11400000, guid: f6642da1ce12d0542ab251c8d3b0aff5,
+        type: 2}
+    - target: {fileID: 6075630004255067455, guid: 372904c0d32a3c743bfe74619c5c23d4,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 11400000, guid: f6642da1ce12d0542ab251c8d3b0aff5,
+        type: 2}
+    - target: {fileID: 8515961938661700789, guid: 372904c0d32a3c743bfe74619c5c23d4,
+        type: 3}
+      propertyPath: FireHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: f6642da1ce12d0542ab251c8d3b0aff5,
+        type: 2}
     - target: {fileID: 8515961938887812538, guid: 372904c0d32a3c743bfe74619c5c23d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3649,6 +3684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5830461788904580133, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
+    - {fileID: 8515961938887812539, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 372904c0d32a3c743bfe74619c5c23d4, type: 3}
 --- !u!1 &1989649288
 GameObject:

@@ -11,8 +11,15 @@ public class takeDamageFireFighter : MonoBehaviour
     public Sprite FireFighterHurt;
     public Sprite FireFighter;
 
+    public static int fireCounter;
+
     float timer = 1f;
     float delay = 1f;
+
+    void Start()
+    {
+        fireCounter = 0;
+    }
 
     /*
      * If a bullet collides with firefighter then
@@ -49,6 +56,8 @@ public class takeDamageFireFighter : MonoBehaviour
         if (FireHealth.currentHealth == 0)
         {
             Destroy(this.gameObject);
+            fireCounter += 1;
+            UnityEngine.Debug.Log("Kills: " + fireCounter);
         }
     }
 }

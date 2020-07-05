@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3993509902400146203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.16, y: 0.42, z: -0.36120585}
+  m_LocalPosition: {x: 2.68, y: -0.95, z: -0.36120585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8515961938661700790}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2554786031c0a41846f176ddf4f084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireHealth: {fileID: 11400000, guid: 2fe34a4673d9fea429a9868a52ce53b1, type: 2}
+  FireHealth: {fileID: 0}
   FireFighterHurt: {fileID: 21300000, guid: 75903dca41ced7644bc5144002b920cf, type: 3}
   FireFighter: {fileID: 21300000, guid: e3532cc1e081bea4ca4e75af89cb3db5, type: 3}
 --- !u!50 &8515961938661700785
@@ -278,7 +278,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8515961938887812538}
   - component: {fileID: 8515961938887812539}
-  - component: {fileID: 5830461788904580133}
   m_Layer: 0
   m_Name: Killers
   m_TagString: Killer
@@ -336,21 +335,6 @@ MonoBehaviour:
     m_Bits: 1024
   facingDirection: 0
   kidDetected: 0
---- !u!114 &5830461788904580133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8515961938887812540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5bccf6dbbc0ba04897a3a8b11328127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  rb: {fileID: 0}
-  fire: {fileID: 0}
 --- !u!1 &8515961939030787581
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,8 +491,7 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 11400000, guid: 2fe34a4673d9fea429a9868a52ce53b1,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4951425790669641652, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
       propertyPath: m_Name
