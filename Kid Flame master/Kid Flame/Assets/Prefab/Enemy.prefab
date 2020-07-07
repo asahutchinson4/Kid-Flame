@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &35302578118459207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6064853941302291536}
+  m_Layer: 11
+  m_Name: LocalCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6064853941302291536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35302578118459207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.93, y: -0.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8819536286694766900}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &82033668920288023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3023328730364253465}
+  m_Layer: 11
+  m_Name: FireManCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3023328730364253465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82033668920288023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.95, y: -0.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8819536286694766900}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7196239709189879543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2497975374145628833}
+  m_Layer: 11
+  m_Name: KidCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2497975374145628833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196239709189879543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.89, y: -0.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8819536286694766900}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8819536286056767995
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8819536286056767994}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8819536286694766900}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8819536286390879225
 GameObject:
@@ -39,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8819536286390879224}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8819536286694766900}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8819536286694766901
 GameObject:
@@ -74,7 +164,7 @@ GameObject:
   - component: {fileID: 8819536286694766902}
   - component: {fileID: 8819536286694766903}
   - component: {fileID: 8819536286694766899}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Alive
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -92,6 +182,9 @@ Transform:
   m_LocalPosition: {x: 2.57, y: -0.01, z: -0.5761719}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 3023328730364253465}
+  - {fileID: 6064853941302291536}
+  - {fileID: 2497975374145628833}
   - {fileID: 8819536286056767994}
   - {fileID: 8819536286390879224}
   - {fileID: 8819536287177064062}
@@ -240,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8819536286923964184}
   - component: {fileID: 8819536286923964185}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -275,17 +368,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthData: {fileID: 11400000, guid: d2d5f062ea22bbe41a2b5ab3189a182b, type: 2}
-  healthBar: {fileID: 0}
   groundCheckDistance: 0.5
   wallCheckDistance: 0.1
   carCheckDistance: 0.1
+  kidCheckDistance: 0.1
+  localCheckDistance: 0.1
+  fireManCheckDistance: 0.1
   movementSpeed: 3
   groundCheck: {fileID: 8819536286056767994}
   wallCheck: {fileID: 8819536286390879224}
+  kidCheck: {fileID: 2497975374145628833}
+  localCheck: {fileID: 6064853941302291536}
+  fireManCheck: {fileID: 3023328730364253465}
   carCheck: {fileID: 8819536287177064062}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  whatIsKidFlame:
+    serializedVersion: 2
+    m_Bits: 1024
+  whatIsLocal:
+    serializedVersion: 2
+    m_Bits: 2048
+  whatIsFireMan:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!1 &8819536287177064063
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8819536287177064062}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: carCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8819536286694766900}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7893338184570694456
 PrefabInstance:
@@ -323,6 +430,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8819536286694766900}
     m_Modifications:
+    - target: {fileID: 4951425789552005069, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790424764366, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790609759378, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4951425790669641650, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 4951425790669641650, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4951425790669641650, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
@@ -382,6 +504,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBar1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790669641652, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790691989882, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5021269cb20034b89e3fe4ec461bc9, type: 3}

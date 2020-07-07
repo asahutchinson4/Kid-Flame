@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5672370132575418672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.157559, y: -3.8900018, z: -100}
+  m_LocalPosition: {x: -5.66, y: -3.8900018, z: -100}
   m_LocalScale: {x: 1.2148371, y: 1.1346883, z: 1}
   m_Children:
   - {fileID: 5672370132603445927}
@@ -228,6 +228,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 5672370132603445927}
   explosionPrefab: {fileID: 8089683767192110739, guid: aeb966646db275f49acbd52cc5a91e38,
     type: 3}
+  health: {fileID: 11400000, guid: e256626ce19b04242b99d2fc5535c61d, type: 2}
 --- !u!1 &5672370132603445924
 GameObject:
   m_ObjectHideFlags: 0

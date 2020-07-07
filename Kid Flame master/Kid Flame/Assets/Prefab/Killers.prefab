@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2871851800405000968}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: sprayPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8515961938661700790}
-  m_RootOrder: 5
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2500769407970336803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8544182510491995828}
+  m_Layer: 0
+  m_Name: FFfiremanCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8544182510491995828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500769407970336803}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.44, y: -0.97, z: -2.9596272}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8515961938661700790}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3993509902400146203
 GameObject:
@@ -39,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 597287201660130553}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FFkidCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +88,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8515961938661700790}
-  m_RootOrder: 4
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7002545702451639018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8107553798321922444}
+  m_Layer: 12
+  m_Name: FFLocalCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8107553798321922444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002545702451639018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.92, y: -0.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8515961938661700790}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8515961938661700791
 GameObject:
@@ -75,7 +135,7 @@ GameObject:
   - component: {fileID: 8515961938661700787}
   - component: {fileID: 8515961938661700788}
   - component: {fileID: 1810283237919377482}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireFighter
   m_TagString: Killer
   m_Icon: {fileID: 0}
@@ -93,11 +153,13 @@ Transform:
   m_LocalPosition: {x: 19.45, y: -2.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8544182510491995828}
+  - {fileID: 8107553798321922444}
+  - {fileID: 597287201660130553}
   - {fileID: 8515961940729999836}
   - {fileID: 8515961939840006447}
   - {fileID: 8515961939030787580}
   - {fileID: 6075630004255067454}
-  - {fileID: 597287201660130553}
   - {fileID: 2871851800405000968}
   m_Father: {fileID: 8515961938887812538}
   m_RootOrder: 0
@@ -255,10 +317,14 @@ MonoBehaviour:
   wallCheckDistance: 0.1
   carCheckDistance: 0.1
   kidCheckDistance: 14
+  localCheckDistance: 0.3
+  fireManCheckDistance: 0.3
   movementSpeed: 5
   groundCheck: {fileID: 8515961940729999836}
   wallCheck: {fileID: 8515961939030787580}
   carCheck: {fileID: 8515961939840006447}
+  localCheck: {fileID: 8107553798321922444}
+  fireManCheck: {fileID: 8544182510491995828}
   kidCheck: {fileID: 597287201660130553}
   whatIsGround:
     serializedVersion: 2
@@ -266,6 +332,12 @@ MonoBehaviour:
   whatIsKidFlame:
     serializedVersion: 2
     m_Bits: 1024
+  whatIsLocal:
+    serializedVersion: 2
+    m_Bits: 2048
+  whatIsFireMan:
+    serializedVersion: 2
+    m_Bits: 4096
   facingDirection: 0
   kidDetected: 0
 --- !u!1 &8515961938887812540
@@ -277,8 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8515961938887812538}
-  - component: {fileID: 8515961938887812539}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Killers
   m_TagString: Killer
   m_Icon: {fileID: 0}
@@ -300,41 +371,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8515961938887812539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8515961938887812540}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2978643dddd037429990e31bce49f62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interval: 0.1
-  healthData: {fileID: 0}
-  WaterPrefab: {fileID: 5093866497387144465, guid: 4514f47d92502f345bdc1b5a8fcf3c9d,
-    type: 3}
-  sprayPoint: {fileID: 2871851800405000968}
-  water: {fileID: 0}
-  groundCheckDistance: 0.5
-  wallCheckDistance: 0.1
-  carCheckDistance: 0.1
-  kidCheckDistance: 14
-  movementSpeed: 5
-  groundCheck: {fileID: 8515961940729999836}
-  wallCheck: {fileID: 8515961939030787580}
-  carCheck: {fileID: 8515961939840006447}
-  kidCheck: {fileID: 597287201660130553}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  whatIsKidFlame:
-    serializedVersion: 2
-    m_Bits: 1024
-  facingDirection: 0
-  kidDetected: 0
 --- !u!1 &8515961939030787581
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8515961939030787580}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FFwallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +399,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8515961938661700790}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8515961939840006448
 GameObject:
@@ -374,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8515961939840006447}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FFcarCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8515961938661700790}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8515961940729999837
 GameObject:
@@ -404,7 +440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8515961940729999836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FFgroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8515961938661700790}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1217668212406508172
 PrefabInstance:
@@ -432,6 +468,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8515961938661700790}
     m_Modifications:
+    - target: {fileID: 4951425789552005069, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790424764366, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790609759378, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4951425790669641650, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -470,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 4951425790669641650, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4951425790669641650, guid: 5c5021269cb20034b89e3fe4ec461bc9,
         type: 3}
@@ -496,6 +547,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBar1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790669641652, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951425790691989882, guid: 5c5021269cb20034b89e3fe4ec461bc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c5021269cb20034b89e3fe4ec461bc9, type: 3}

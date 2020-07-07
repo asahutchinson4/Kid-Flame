@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.ComponentModel.Design.Serialization;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Threading;
@@ -32,6 +33,8 @@ public class FireFighterController : MonoBehaviour
         wallCheckDistance,
         carCheckDistance,
         kidCheckDistance,
+        localCheckDistance,
+        fireManCheckDistance,
         movementSpeed;
 
     [SerializeField]
@@ -39,6 +42,8 @@ public class FireFighterController : MonoBehaviour
         groundCheck,
         wallCheck,
         carCheck,
+        localCheck,
+        fireManCheck,
         kidCheck;
 
     [SerializeField]
@@ -46,6 +51,12 @@ public class FireFighterController : MonoBehaviour
 
     [SerializeField]
     private LayerMask whatIsKidFlame;
+
+    [SerializeField]
+    private LayerMask whatIsLocal;
+
+    [SerializeField]
+    private LayerMask whatIsFireMan;
 
     public int
         facingDirection;
@@ -55,6 +66,8 @@ public class FireFighterController : MonoBehaviour
     private bool
         groundDetected,
         wallDetected,
+        localDetected,
+        fireManDetected,
         carDetected;
 
     public bool kidDetected;
@@ -76,9 +89,7 @@ public class FireFighterController : MonoBehaviour
         fireManRb = fireMan.GetComponent<Rigidbody2D>();
         fireManAnim = fireMan.GetComponent<Animator>();
 
-
         facingDirection = 1;
-
     }
 
     /*
@@ -111,6 +122,8 @@ public class FireFighterController : MonoBehaviour
         wallDetected = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
         carDetected = Physics2D.Raycast(carCheck.position, transform.right, carCheckDistance, whatIsGround);
         kidDetected = Physics2D.Raycast(kidCheck.position, transform.right, kidCheckDistance, whatIsKidFlame);
+        localDetected = Physics2D.Raycast(localCheck.position, transform.right, localCheckDistance, whatIsLocal);
+        fireManDetected = Physics2D.Raycast(fireManCheck.position, transform.right, fireManCheckDistance, whatIsFireMan);
 
         if (kidDetected)
         {
@@ -124,7 +137,7 @@ public class FireFighterController : MonoBehaviour
             }
         }
 
-        else if (!groundDetected || wallDetected || carDetected)
+        else if (!groundDetected || wallDetected || carDetected || localDetected || localDetected)
         {
             flip();
         }
@@ -171,5 +184,7 @@ public class FireFighterController : MonoBehaviour
         Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         Gizmos.DrawLine(carCheck.position, new Vector2(carCheck.position.x + carCheckDistance, carCheck.position.y));
         Gizmos.DrawLine(kidCheck.position, new Vector2(kidCheck.position.x + kidCheckDistance, kidCheck.position.y));
+        Gizmos.DrawLine(localCheck.position, new Vector2(localCheck.position.x + localCheckDistance, localCheck.position.y));
+        Gizmos.DrawLine(fireManCheck.position, new Vector2(fireManCheck.position.x + fireManCheckDistance, fireManCheck.position.y));
     }
 }

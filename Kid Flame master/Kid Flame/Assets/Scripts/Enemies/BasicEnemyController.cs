@@ -24,16 +24,31 @@ public class BasicEnemyController : MonoBehaviour
         groundCheckDistance,
         wallCheckDistance,
         carCheckDistance,
+        kidCheckDistance,
+        localCheckDistance,
+        fireManCheckDistance,
         movementSpeed;
 
     [SerializeField]
     private Transform
         groundCheck,
         wallCheck,
+        kidCheck,
+        localCheck,
+        fireManCheck,
         carCheck;
 
     [SerializeField]
     private LayerMask whatIsGround;
+
+    [SerializeField]
+    private LayerMask whatIsKidFlame;
+
+    [SerializeField]
+    private LayerMask whatIsLocal;
+
+    [SerializeField]
+    private LayerMask whatIsFireMan;
 
     private int
         facingDirection;
@@ -43,6 +58,9 @@ public class BasicEnemyController : MonoBehaviour
     private bool
         groundDetected,
         wallDetected,
+        KidisDetected,
+        localDetected,
+        fireManDetected,
         carDetected;
 
     private GameObject alive;
@@ -95,8 +113,12 @@ public class BasicEnemyController : MonoBehaviour
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
         wallDetected = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
         carDetected = Physics2D.Raycast(carCheck.position, transform.right, carCheckDistance, whatIsGround);
+        KidisDetected = Physics2D.Raycast(kidCheck.position, transform.right, kidCheckDistance, whatIsKidFlame);
+        localDetected = Physics2D.Raycast(localCheck.position, transform.right, localCheckDistance, whatIsLocal);
+        fireManDetected = Physics2D.Raycast(fireManCheck.position, transform.right, fireManCheckDistance, whatIsFireMan);
 
-        if(!groundDetected || wallDetected || carDetected)
+
+        if (!groundDetected || wallDetected || carDetected || KidisDetected || fireManDetected || localDetected)
         {
             flip();
         }
@@ -125,5 +147,8 @@ public class BasicEnemyController : MonoBehaviour
         Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
         Gizmos.DrawLine(carCheck.position, new Vector2(carCheck.position.x + carCheckDistance, carCheck.position.y));
+        Gizmos.DrawLine(kidCheck.position, new Vector2(kidCheck.position.x + kidCheckDistance, kidCheck.position.y));
+        Gizmos.DrawLine(fireManCheck.position, new Vector2(fireManCheck.position.x + fireManCheckDistance, fireManCheck.position.y));
+        Gizmos.DrawLine(localCheck.position, new Vector2(localCheck.position.x + localCheckDistance, localCheck.position.y));
     }
 }
