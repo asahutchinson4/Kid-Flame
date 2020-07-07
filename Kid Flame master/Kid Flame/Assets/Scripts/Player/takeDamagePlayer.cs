@@ -69,7 +69,7 @@ public class takeDamagePlayer : MonoBehaviour
             return;
         }
 
-        if (timer <=0 && health.normalizedHealth < .4f)
+        if (timer <= 0 && health.normalizedHealth < .4f)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Cold;
         }

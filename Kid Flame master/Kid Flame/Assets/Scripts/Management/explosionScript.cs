@@ -10,6 +10,7 @@ public class explosionScript : MonoBehaviour
 {
     public Transform spawnPoint;
     public GameObject explosionPrefab;
+    public characterHealth health;
 
     /*
      * If fireball collides with car then it blows up.
@@ -20,6 +21,8 @@ public class explosionScript : MonoBehaviour
         {
             Instantiate(explosionPrefab, spawnPoint.position, spawnPoint.rotation);
             Destroy(this.gameObject);
+
+            health.GainHealth(15f);
         }
     }
 }

@@ -12,9 +12,16 @@ public class takeDamage : MonoBehaviour
     public characterHealth health;
     public Sprite Hurt;
     public Sprite Local;
+
+    public static int localCounter;
    
     float timer = 1f;
     float delay = 1f;
+
+    void Start()
+    {
+        localCounter = 0;
+    }
   
     /*
      * If a bullet collides with local then
@@ -51,6 +58,7 @@ public class takeDamage : MonoBehaviour
         if(health.currentHealth == 0)
         {
             Destroy(this.gameObject);
+            localCounter += 1;
         }
     }
 

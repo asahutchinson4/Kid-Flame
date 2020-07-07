@@ -57,7 +57,6 @@ public class takeDamageFireFighter : MonoBehaviour
         {
             Destroy(this.gameObject);
             fireCounter += 1;
-            UnityEngine.Debug.Log("Kills: " + fireCounter);
         }
     }
 }

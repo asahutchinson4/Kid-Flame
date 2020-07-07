@@ -38,6 +38,15 @@ public class characterHealth : ScriptableObject
 
     }
 
+    public void GainHealth(float amount)
+    {
+        currentHealth += amount;
+        if (currentHealth > totalHealth)
+        {
+            currentHealth = totalHealth;
+        }
+        normalizedHealth = currentHealth / totalHealth;
+    }
  
 }
 

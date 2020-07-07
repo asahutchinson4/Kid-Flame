@@ -12,8 +12,19 @@ public class karmaMeter : MonoBehaviour {
 
     private float moralMax;
     private float moral;
+    private float fireOldVal;
+    private float localOldVal;
+    private float fireCount;
+
+    public takeDamageFireFighter fireman;
 
     // Start is called before the first frame update
+    void Start()
+    {
+        localOldVal = 0;
+        fireOldVal = 0;
+    }
+
     void Awake()
     {
         needleTransform = transform.Find("needle");
@@ -25,7 +36,19 @@ public class karmaMeter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        moral += 30f * Time.deltaTime;
+
+        if (takeDamageFireFighter.fireCounter > fireOldVal)
+        {
+            moral += 15f;
+            fireOldVal = takeDamageFireFighter.fireCounter;
+        }
+
+        if (takeDamage.localCounter > localOldVal)
+        {
+            moral += 30f;
+            localOldVal = takeDamage.localCounter;
+        }
+
         
         if(moral > moralMax)
         {
@@ -34,6 +57,8 @@ public class karmaMeter : MonoBehaviour {
 
         needleTransform.eulerAngles = new Vector3(0, 0, GetSpeedRotation());
     }
+
+    
 
     private float GetSpeedRotation()
     {
