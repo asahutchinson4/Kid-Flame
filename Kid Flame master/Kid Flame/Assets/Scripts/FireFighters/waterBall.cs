@@ -56,5 +56,9 @@ public class waterBall : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (col.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

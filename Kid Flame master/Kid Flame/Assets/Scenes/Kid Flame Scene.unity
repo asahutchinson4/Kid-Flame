@@ -3340,7 +3340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619856868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 209.21, y: -4.02, z: 0}
+  m_LocalPosition: {x: 276.72, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 620322958}
@@ -3973,7 +3973,7 @@ GameObject:
   - component: {fileID: 698665040}
   m_Layer: 8
   m_Name: JumpableBuilding2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4808,7 +4808,7 @@ GameObject:
   - component: {fileID: 1053395581}
   m_Layer: 8
   m_Name: JumpableBuilding1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

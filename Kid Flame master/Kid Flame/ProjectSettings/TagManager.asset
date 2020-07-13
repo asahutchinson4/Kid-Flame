@@ -11,6 +11,7 @@ TagManager:
   - Killer
   - Kid Flame
   - Water
+  - Wall
   layers:
   - Default
   - TransparentFX

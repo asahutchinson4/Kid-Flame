@@ -47,7 +47,7 @@ public class Fireball : MonoBehaviour
                 Destroy(gameObject);
                 SoundManager.playCarBlowUpSound();
             }
-        if (col.gameObject.CompareTag("Cloud"))
+            if (col.gameObject.CompareTag("Cloud"))
             {
                 Destroy(gameObject);
             }
@@ -60,6 +60,10 @@ public class Fireball : MonoBehaviour
                 Destroy(gameObject);
             }
             if (col.gameObject.CompareTag("Water"))
+            {
+                Destroy(gameObject);
+            }
+            if (col.gameObject.CompareTag("Wall"))
             {
                 Destroy(gameObject);
             }

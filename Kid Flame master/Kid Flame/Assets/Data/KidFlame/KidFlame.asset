@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd57bbe7a6d19214198edb28bcbd0aee, type: 3}
   m_Name: KidFlame
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 70
   totalHealth: 100
-  normalizedHealth: 1
+  normalizedHealth: 0.7

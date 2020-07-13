@@ -153,7 +153,7 @@ public class FireFighterController : MonoBehaviour
             }
         }
 
-        else if (!groundDetected || wallDetected || carDetected || localDetected || localDetected)
+        else if (!groundDetected || wallDetected || carDetected || localDetected || localDetected || fireManDetected)
         {
             flip();
         }
