@@ -312,11 +312,10 @@ MonoBehaviour:
   WaterPrefab: {fileID: 5093866497387144465, guid: 4514f47d92502f345bdc1b5a8fcf3c9d,
     type: 3}
   sprayPoint: {fileID: 2871851800405000968}
-  water: {fileID: 0}
   groundCheckDistance: 0.5
   wallCheckDistance: 0.1
   carCheckDistance: 0.1
-  kidCheckDistance: 14
+  kidCheckDistance: 10
   localCheckDistance: 0.3
   fireManCheckDistance: 0.3
   movementSpeed: 5
@@ -338,8 +337,10 @@ MonoBehaviour:
   whatIsFireMan:
     serializedVersion: 2
     m_Bits: 4096
-  facingDirection: 0
+  facingDirection: 1
   kidDetected: 0
+  waterRb: {fileID: 6368321926986675327, guid: 4514f47d92502f345bdc1b5a8fcf3c9d, type: 3}
+  speed: 8
 --- !u!1 &8515961938887812540
 GameObject:
   m_ObjectHideFlags: 0

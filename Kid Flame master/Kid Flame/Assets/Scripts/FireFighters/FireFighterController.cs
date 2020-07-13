@@ -23,7 +23,8 @@ public class FireFighterController : MonoBehaviour
     public characterHealth healthData;
     public GameObject WaterPrefab;
     public Transform sprayPoint;
-    public waterBall water;
+
+    waterBall waterScript;
 
     private State currentState;
 
@@ -75,7 +76,11 @@ public class FireFighterController : MonoBehaviour
     private GameObject fireMan;
     private Rigidbody2D fireManRb;
     private Animator fireManAnim;
+    public Rigidbody2D waterRb;
 
+
+    public float speed;
+ 
     /*
      * Start is called before the first frame update.
      * Finds firefighter gameobject and gets rigidbody
@@ -90,6 +95,11 @@ public class FireFighterController : MonoBehaviour
         fireManAnim = fireMan.GetComponent<Animator>();
 
         facingDirection = 1;
+
+        waterScript = WaterPrefab.GetComponent<waterBall>();
+        waterRb = WaterPrefab.GetComponent<Rigidbody2D>();
+
+        waterScript.shooting = new Vector2(speed * facingDirection, 0f);
     }
 
     /*
@@ -130,10 +140,16 @@ public class FireFighterController : MonoBehaviour
             
             stop();
 
-            if (Time.time >= nextShot)
+            if (Time.time >= nextShot && facingDirection == 1)
             {
                 nextShot = Time.time + interval;
                 sprayWater();
+            }
+
+            if (Time.time >= nextShot && facingDirection == -1)
+            {
+                nextShot = Time.time + interval;
+                sprayWaterLeft();
             }
         }
 
@@ -154,6 +170,15 @@ public class FireFighterController : MonoBehaviour
     private void sprayWater()
     {
         Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
+        waterScript.shooting.Set(speed, 0f);
+        waterRb.velocity = waterScript.shooting;
+    }
+
+    private void sprayWaterLeft()
+    {
+        Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
+        waterScript.shooting.Set(speed * -1, 0f);
+        waterRb.velocity = waterScript.shooting;
     }
 
     /*

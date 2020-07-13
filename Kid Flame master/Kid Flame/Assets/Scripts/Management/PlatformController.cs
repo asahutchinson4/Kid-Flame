@@ -7,7 +7,7 @@ using UnityEngine;
  */
 public class PlatformController : MonoBehaviour
 {
-    float dirX, moveSpeed = 1f;
+    public float dirX, moveSpeed;
     bool moveRight = true;
     private float initialX;
     private float moveLimit = 4f;

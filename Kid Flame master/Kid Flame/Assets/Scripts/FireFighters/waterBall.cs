@@ -9,49 +9,26 @@ using UnityEngine;
  */
 public class waterBall : MonoBehaviour
 {
-    public float speed;
+    private float speed;
     public Rigidbody2D rb;
     public FireFighterController fire;
-    private Vector2 shooting;
-    private int direction;
+    public Vector2 shooting;
 
 
     /*
      * Start is called before the first frame update.
      * Assigns rigidbody, velocity and object reference
-     * facingDirection.
+     * speed.
      */
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
-        shooting = new Vector2(speed, 0f);
-        rb.velocity = shooting;
-
         fire = GameObject.Find("FireFighter").GetComponent<FireFighterController>();
-        direction = fire.facingDirection;
+        speed = fire.speed;
+
+        rb = this.GetComponent<Rigidbody2D>();
+        rb.velocity = shooting;
     }
 
-    /*
-     * Update is called once per frame.
-     * If firefighter is facing right then he
-     * shoots to the right and if he is facing
-     * left then he shoots to the left.
-     */
-    void Update()
-    { 
-
-        if (direction == 1)
-        {
-            shooting.Set(speed, 0f);
-            rb.velocity = shooting;
-        }
-
-        if (direction == -1)
-        {
-            shooting.Set(speed * -1, 0f);
-            rb.velocity = shooting;
-        }
-    }
 
     /*
      * If the tag matches then the water projectile will
