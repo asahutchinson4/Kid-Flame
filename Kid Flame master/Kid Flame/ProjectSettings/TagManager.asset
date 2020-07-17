@@ -12,6 +12,8 @@ TagManager:
   - Kid Flame
   - Water
   - Wall
+  - Dad
+  - Trigger
   layers:
   - Default
   - TransparentFX
