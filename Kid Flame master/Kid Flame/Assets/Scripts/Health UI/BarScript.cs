@@ -33,6 +33,10 @@ public class BarScript : MonoBehaviour
         {
             ChangeColor(Color.blue);
         }
+        if(barSize >= 0.4f)
+        {
+            ChangeColor(Color.red);
+        }
     }
 
     /*
