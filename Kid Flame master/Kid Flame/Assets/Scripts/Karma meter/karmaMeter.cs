@@ -40,19 +40,21 @@ public class karmaMeter : MonoBehaviour {
         //moral += 15f * Time.deltaTime;
         if (takeDamageDad.dadCounter == 1)
         {
-            moral += 9999;
+            moral += 175 * Time.deltaTime;
         }
 
         if (takeDamageFireFighter.fireCounter > fireOldVal)
         {
-            moral += 15f;
-            fireOldVal = takeDamageFireFighter.fireCounter;
+            moral += 10f * Time.deltaTime;
+            StartCoroutine("WaitForSecFire");
+            UnityEngine.Debug.Log("Moral = " + moral);
         }
 
         if (takeDamage.localCounter > localOldVal)
         {
-            moral += 30f * Time.deltaTime;
-            localOldVal = takeDamage.localCounter;
+            moral += 25f * Time.deltaTime;
+            StartCoroutine("WaitForSecLocal");
+            UnityEngine.Debug.Log("Moral = " + moral);
         }
 
         
@@ -73,5 +75,17 @@ public class karmaMeter : MonoBehaviour {
         float moralNormalized = moral / moralMax;
 
         return MAX_GOOD - moralNormalized * totalAngleSize;
+    }
+
+    IEnumerator WaitForSecFire()
+    {
+        yield return new WaitForSeconds(1);
+        fireOldVal = takeDamageFireFighter.fireCounter;
+    } 
+    
+    IEnumerator WaitForSecLocal()
+    {
+        yield return new WaitForSeconds(1);
+        localOldVal = takeDamage.localCounter;
     }
 }
