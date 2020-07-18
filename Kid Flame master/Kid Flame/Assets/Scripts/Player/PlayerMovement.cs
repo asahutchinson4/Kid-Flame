@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask platformsLayerMask;
     public Transform player;
     public float moveSpeed = 3f;
+    public float jumpVelocity = 60f;
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxCollider2dGround;
     private BoxCollider2D boxCollider2dCloud;
@@ -41,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal") * moveSpeed);
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
-            float jumpVelocity = 60f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
         }
 

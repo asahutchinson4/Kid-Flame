@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Threading;
 using UnityEngine;
 
 public class karmaMeter : MonoBehaviour {
@@ -36,6 +37,11 @@ public class karmaMeter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //moral += 15f * Time.deltaTime;
+        if (takeDamageDad.dadCounter == 1)
+        {
+            moral += 9999;
+        }
 
         if (takeDamageFireFighter.fireCounter > fireOldVal)
         {
@@ -45,7 +51,7 @@ public class karmaMeter : MonoBehaviour {
 
         if (takeDamage.localCounter > localOldVal)
         {
-            moral += 30f;
+            moral += 30f * Time.deltaTime;
             localOldVal = takeDamage.localCounter;
         }
 

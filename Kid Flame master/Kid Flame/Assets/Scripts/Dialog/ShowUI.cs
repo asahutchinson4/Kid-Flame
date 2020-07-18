@@ -10,6 +10,10 @@ public class ShowUI : MonoBehaviour
     public GameObject KidResponseToApology;
     public GameObject DadAdmit;
     public GameObject KidPain;
+    public GameObject DadBeg;
+    public GameObject KidFlame;
+
+    public PlayerMovement kidScript;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +24,19 @@ public class ShowUI : MonoBehaviour
         KidResponseToApology.SetActive(false);
         DadAdmit.SetActive(false);
         KidPain.SetActive(false);
+        DadBeg.SetActive(false);
+
+        kidScript = KidFlame.GetComponent<PlayerMovement>();
     }
 
    public void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.CompareTag("Kid Flame")) ;
+        {
+            kidScript.moveSpeed = 0f;
+            kidScript.jumpVelocity = 0f;
+        }
+
         if (col.gameObject.CompareTag("Kid Flame"));
         {
             DadGreeting.SetActive(true);
@@ -58,6 +71,12 @@ public class ShowUI : MonoBehaviour
         {
             StartCoroutine("FinishTalking5");
             StartCoroutine("WaitForSec6");
+        }
+        
+        if (col.gameObject.CompareTag("Kid Flame"))
+        {
+            StartCoroutine("FinishTalking6");
+            StartCoroutine("WaitForSec7");
         }
     }
 
@@ -126,5 +145,17 @@ public class ShowUI : MonoBehaviour
     {
         yield return new WaitForSeconds(28);
         Destroy(KidPain);
+    }
+
+    IEnumerator FinishTalking6()
+    {
+        yield return new WaitForSeconds(28);
+        DadBeg.SetActive(true);
+    }
+
+    IEnumerator WaitForSec7()
+    {
+        yield return new WaitForSeconds(32);
+        Destroy(DadBeg);
     }
 }
