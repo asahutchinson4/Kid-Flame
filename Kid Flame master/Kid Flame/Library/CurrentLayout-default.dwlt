@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 142
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 143
+  controlID: 42
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 144
+  controlID: 43
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,7 +394,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 8a350000
       m_LastClickedID: 13706
-      m_ExpandedIDs: 6cfbffff
+      m_ExpandedIDs: 6cfbffff8a350000e6360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 472.70367, y: -4.753622, z: -473.10156}
+    m_Target: {x: 466.03537, y: 2.7350152, z: -1036.1497}
     speed: 2
-    m_Value: {x: 472.70367, y: -4.753622, z: -473.10156}
+    m_Value: {x: 466.03537, y: 2.7350152, z: -1036.1497}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 38.882362
+    m_Target: 50.833286
     speed: 2
-    m_Value: 38.882362
+    m_Value: 50.833286
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -696,11 +696,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/FireFighters
+    - Assets/Scripts/Dialog
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/FireFighters
+  - Assets/Scripts/Dialog
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Asa Hutchinson IV\Kid Flame Game\Kid-Flame\Kid Flame
     master\Kid Flame
@@ -708,8 +708,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: be3a0000
-    m_LastClickedID: 15038
+    m_SelectedIDs: b03a0000
+    m_LastClickedID: 15024
     m_ExpandedIDs: 00000000863a0000883a00008a3a00008c3a00008e3a0000903a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
