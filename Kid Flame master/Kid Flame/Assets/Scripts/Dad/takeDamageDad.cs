@@ -11,6 +11,8 @@ public class takeDamageDad : MonoBehaviour
     void Start()
     {
         dadCounter = 0;
+        health.currentHealth = 100;
+        health.normalizedHealth = 1;
     }
 
     public void OnCollisionEnter2D(Collision2D col)

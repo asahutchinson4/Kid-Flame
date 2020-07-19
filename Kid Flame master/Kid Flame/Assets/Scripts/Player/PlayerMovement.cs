@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider2dCloud;
     public GameObject FireballPrefab;
     public Transform firePoint;
+    public characterHealth health;
     
 
     /*
@@ -29,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
         boxCollider2dCloud = transform.GetComponent<BoxCollider2D>();
         boxCollider2dGround = transform.GetComponent<BoxCollider2D>();
+
+        health.currentHealth = 100;
+        health.normalizedHealth = 1;
     }
 
     /*

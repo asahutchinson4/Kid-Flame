@@ -100,6 +100,9 @@ public class FireFighterController : MonoBehaviour
         waterRb = WaterPrefab.GetComponent<Rigidbody2D>();
 
         waterScript.shooting = new Vector2(speed * facingDirection, 0f);
+
+        healthData.currentHealth = 100;
+        healthData.normalizedHealth = 1;
     }
 
     /*

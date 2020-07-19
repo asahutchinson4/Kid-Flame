@@ -85,6 +85,9 @@ public class BasicEnemyController : MonoBehaviour
 
         facingDirection = 1;
 
+        healthData.currentHealth = 100;
+        healthData.normalizedHealth = 1;
+
     }
 
     /*

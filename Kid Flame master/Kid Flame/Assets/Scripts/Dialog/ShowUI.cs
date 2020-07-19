@@ -14,6 +14,7 @@ public class ShowUI : MonoBehaviour
     public GameObject KidFlame;
 
     public PlayerMovement kidScript;
+    public characterHealth health;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,20 @@ public class ShowUI : MonoBehaviour
         DadBeg.SetActive(false);
 
         kidScript = KidFlame.GetComponent<PlayerMovement>();
+    }
+
+    void Update()
+    {
+        if (health.currentHealth == 0)
+        {
+            Destroy(DadGreeting);
+            Destroy(KidIntro);
+            Destroy(DadApology);
+            Destroy(KidResponseToApology);
+            Destroy(DadAdmit);
+            Destroy(KidPain);
+            Destroy(DadBeg);
+        }
     }
 
    public void OnTriggerEnter2D(Collider2D col)
