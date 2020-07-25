@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1358
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 13983
+  controlID: 14039
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 13984
+  controlID: 13905
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 13985
+  controlID: 13906
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 458
     height: 861
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e6310000
-      m_LastClickedID: 0
-      m_ExpandedIDs: baf2ffff6cfbffff22370000
+      m_SelectedIDs: f8360000
+      m_LastClickedID: 14072
+      m_ExpandedIDs: 8af5ffff6cfbffffb8350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 468.0926, y: 2.1940937, z: -3869.1448}
+    m_Target: {x: 1121.4465, y: 547.2396, z: -4883.1685}
     speed: 2
-    m_Value: {x: 468.0926, y: 2.1940937, z: -3869.1448}
+    m_Value: {x: 1121.4465, y: 547.2396, z: -4883.1685}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 16.962185
+    m_Target: 1437.508
     speed: 2
-    m_Value: 16.962185
+    m_Value: 1437.508
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -696,21 +696,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player
+    - Assets/Scripts/Karma meter
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Player
+  - Assets/Scripts/Karma meter
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Asa Hutchinson IV\Kid Flame Game\Kid-Flame\Kid Flame
     master\Kid Flame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 183b0000
-    m_LastClickedID: 15128
-    m_ExpandedIDs: 00000000e23a0000e43a0000e63a0000e83a0000ea3a0000ec3a000000ca9a3b
+    scrollPos: {x: 0, y: 166}
+    m_SelectedIDs: 723b0000
+    m_LastClickedID: 15218
+    m_ExpandedIDs: 00000000403b0000423b0000443b0000463b0000483b00004a3b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -738,7 +738,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e23a0000e43a0000e63a0000e83a0000ea3a0000ec3a000000ca9a3b
+    m_ExpandedIDs: 00000000403b0000423b0000443b0000463b0000483b00004a3b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -857,4 +857,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 100
