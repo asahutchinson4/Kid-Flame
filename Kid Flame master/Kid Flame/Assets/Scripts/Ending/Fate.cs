@@ -16,6 +16,7 @@ public class Fate : MonoBehaviour
     public characterHealth health;
 
     public static bool enableKeyS = false;
+    public static bool enableKeyF = false;
 
     // Start is called before the first frame update
     void Start()
@@ -78,5 +79,6 @@ public class Fate : MonoBehaviour
         F.SetActive(true);
         S.SetActive(true);
         enableKeyS = true;
+        enableKeyF = true;
     }
 }

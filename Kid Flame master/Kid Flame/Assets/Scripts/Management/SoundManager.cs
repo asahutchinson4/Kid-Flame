@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     public static AudioClip fireBallSound;
     static AudioSource audioSrc;
     public static AudioClip carBlowUp;
+    public static AudioClip stamp;
 
 
     /*
@@ -22,6 +23,7 @@ public class SoundManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource> ();
         fireBallSound = Resources.Load<AudioClip>("FireThrow");
         carBlowUp = Resources.Load<AudioClip>("CarExploding");
+        stamp = Resources.Load<AudioClip>("Stamp");
     }
 
     /* 
@@ -38,5 +40,10 @@ public class SoundManager : MonoBehaviour
     public static void playCarBlowUpSound()
     {
         audioSrc.PlayOneShot(carBlowUp);
+    }
+
+    public static void playStampSound()
+    {
+        audioSrc.PlayOneShot(stamp);
     }
 }
