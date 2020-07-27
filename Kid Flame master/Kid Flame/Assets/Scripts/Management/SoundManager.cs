@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
      */
     void Start()
     {
-        audioSrc = GetComponent<AudioSource> ();
+        audioSrc = GetComponent<AudioSource>();
         fireBallSound = Resources.Load<AudioClip>("FireThrow");
         carBlowUp = Resources.Load<AudioClip>("CarExploding");
         stamp = Resources.Load<AudioClip>("Stamp");

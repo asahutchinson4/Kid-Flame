@@ -12,7 +12,7 @@ public class karmaMeter : MonoBehaviour {
     private Transform needleTransform;
 
     private float moralMax;
-    private static float moral;
+    public static float moral;
     private float fireOldVal;
     private float localOldVal;
     private float fireCount;

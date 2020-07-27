@@ -9,7 +9,6 @@ using UnityEngine;
  */
 public class waterBall : MonoBehaviour
 {
-    private float speed;
     public Rigidbody2D rb;
     public FireFighterController fire;
     public Vector2 shooting;
@@ -17,14 +16,10 @@ public class waterBall : MonoBehaviour
 
     /*
      * Start is called before the first frame update.
-     * Assigns rigidbody, velocity and object reference
-     * speed.
+     * Assigns rigidbody and velocity.
      */
     void Start()
     {
-        fire = GameObject.Find("FireFighter").GetComponent<FireFighterController>();
-        speed = fire.speed;
-
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = shooting;
     }

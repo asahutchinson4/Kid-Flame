@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1308
-  m_MinSize: {x: 679, y: 492}
+  m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 100
+  controlID: 146
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 2004
     height: 1308
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 105
+  controlID: 151
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 0
     width: 2004
     height: 861
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 106
+  controlID: 152
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 458
     height: 861
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -391,24 +391,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 45}
-      m_SelectedIDs: 0e370000
-      m_LastClickedID: 14094
-      m_ExpandedIDs: 6cfbffffc43500003e360000
+      scrollPos: {x: 0, y: 368}
+      m_SelectedIDs: d0360000
+      m_LastClickedID: 14032
+      m_ExpandedIDs: 64c8fbff08c9fbffd2f7ffff6cfbffffcc350000563600006836000058370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Killers (5)
+        m_OriginalName: Killers (5)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1734
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 479.8919, y: 13.786425, z: -5219.0312}
+    m_Target: {x: -23.59985, y: 1.8590899, z: -6434.758}
     speed: 2
-    m_Value: {x: 479.8919, y: 13.786425, z: -5219.0312}
+    m_Value: {x: -23.59985, y: 1.8590899, z: -6434.758}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 120.67966
+    m_Target: 39.046944
     speed: 2
-    m_Value: 120.67966
+    m_Value: 40.886852
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -696,21 +696,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Asa Hutchinson IV\Kid Flame Game\Kid-Flame\Kid Flame
     master\Kid Flame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 783b0000
-    m_LastClickedID: 15224
-    m_ExpandedIDs: 00000000783b00007a3b00007c3b00007e3b0000803b0000823b000000ca9a3b
+    scrollPos: {x: 0, y: 106}
+    m_SelectedIDs: be3b0000
+    m_LastClickedID: 15294
+    m_ExpandedIDs: 00000000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000c03b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -738,7 +738,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000783b00007a3b00007c3b00007e3b0000803b0000823b0000
+    m_ExpandedIDs: 00000000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -857,4 +857,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 485
+  m_LastVerticalScrollValue: 0
