@@ -89,7 +89,7 @@ public class LevelComplete : MonoBehaviour
             looseCannon.SetActive(false);
         }
 
-        if (karmaMeter.moral > 120 && karmaMeter.moral <= 174)
+        if (karmaMeter.moral > 120 && karmaMeter.moral <= 190)
         {
             D.SetActive(true);
             butcher.SetActive(true);
@@ -101,7 +101,7 @@ public class LevelComplete : MonoBehaviour
             madMan.SetActive(false);
         }
 
-        if (karmaMeter.moral > 174)
+        if (karmaMeter.moral > 190)
         {
             F.SetActive(true);
             psychopath.SetActive(true);

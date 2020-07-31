@@ -35,7 +35,8 @@ public class karmaMeter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //moral += 15f * Time.deltaTime;
+        UnityEngine.Debug.Log("Moral: " + moral);
+
         if (takeDamageDad.dadCounter == 1)
         {
             moral += 175 * Time.deltaTime;
@@ -43,19 +44,16 @@ public class karmaMeter : MonoBehaviour {
 
         if (takeDamageFireFighter.fireCounter > fireOldVal)
         {
-            moral += 10f * Time.deltaTime;
-            StartCoroutine("WaitForSecFire");
-            UnityEngine.Debug.Log("Moral = " + moral);
+            moral += 10f * (Time.deltaTime * 4.0f);
+            StartCoroutine(WaitForSecFire(0.3f));
         }
 
         if (takeDamage.localCounter > localOldVal)
         {
-            moral += 25f * Time.deltaTime;
-            StartCoroutine("WaitForSecLocal");
-            UnityEngine.Debug.Log("Moral = " + moral);
+            moral += 21f * (Time.deltaTime * 4.0f);
+            StartCoroutine(WaitForSecLocal(0.2f));
         }
-
-        
+      
         if(moral > moralMax)
         {
             moral = moralMax;
@@ -63,8 +61,6 @@ public class karmaMeter : MonoBehaviour {
 
         needleTransform.eulerAngles = new Vector3(0, 0, GetSpeedRotation());
     }
-
-    
 
     private float GetSpeedRotation()
     {
@@ -75,15 +71,15 @@ public class karmaMeter : MonoBehaviour {
         return MAX_GOOD - moralNormalized * totalAngleSize;
     }
 
-    IEnumerator WaitForSecFire()
+    IEnumerator WaitForSecFire(float waitTime)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTime);
         fireOldVal = takeDamageFireFighter.fireCounter;
     } 
     
-    IEnumerator WaitForSecLocal()
+    IEnumerator WaitForSecLocal(float waitTime)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTime);
         localOldVal = takeDamage.localCounter;
     }
 }

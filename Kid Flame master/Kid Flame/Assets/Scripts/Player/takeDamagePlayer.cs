@@ -29,7 +29,7 @@ public class takeDamagePlayer : MonoBehaviour
 
         if (col.gameObject.CompareTag("Water"))
         {
-            //health.ReduceHealth(5f);
+            health.ReduceHealth(5f);
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Cold;
             timer = delay;
             return;
