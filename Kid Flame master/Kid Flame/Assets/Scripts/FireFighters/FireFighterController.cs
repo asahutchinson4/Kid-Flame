@@ -138,6 +138,11 @@ public class FireFighterController : MonoBehaviour
         localDetected = Physics2D.Raycast(localCheck.position, transform.right, localCheckDistance, whatIsLocal);
         fireManDetected = Physics2D.Raycast(fireManCheck.position, transform.right, fireManCheckDistance, whatIsFireMan);
 
+        if (!kidDetected)
+        {
+            waterScript.shooting.Set(speed * facingDirection, 0f);
+        }
+
         if (kidDetected)
         {
             
