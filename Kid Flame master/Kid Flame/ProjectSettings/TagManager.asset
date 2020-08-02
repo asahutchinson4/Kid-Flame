@@ -15,6 +15,7 @@ TagManager:
   - Dad
   - Trigger
   - Game Music
+  - StartButton
   layers:
   - Default
   - TransparentFX

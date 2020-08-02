@@ -31,4 +31,12 @@ public class GameMusic : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    void Update()
+    {
+        if(gameStarted.gameHasStarted == true)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

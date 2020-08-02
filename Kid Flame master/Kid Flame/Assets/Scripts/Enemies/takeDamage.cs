@@ -59,6 +59,7 @@ public class takeDamage : MonoBehaviour
         {
             Destroy(this.gameObject);
             localCounter += 1;
+            SoundManager.playCheers();
         }
     }
 

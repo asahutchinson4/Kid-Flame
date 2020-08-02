@@ -180,6 +180,7 @@ public class FireFighterController : MonoBehaviour
         Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
         waterScript.shooting.Set(speed, 0f);
         waterRb.velocity = waterScript.shooting;
+        SoundManager.playerWaterShot();
     }
 
     private void sprayWaterLeft()
@@ -187,6 +188,7 @@ public class FireFighterController : MonoBehaviour
         Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
         waterScript.shooting.Set(speed * -1, 0f);
         waterRb.velocity = waterScript.shooting;
+        SoundManager.playerWaterShot();
     }
 
     /*

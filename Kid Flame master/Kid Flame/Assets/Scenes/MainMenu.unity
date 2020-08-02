@@ -429,7 +429,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 255d6986f784fa84b92320d18d76f57c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.632
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1805,9 +1805,10 @@ GameObject:
   - component: {fileID: 1106087714}
   - component: {fileID: 1106087716}
   - component: {fileID: 1106087715}
+  - component: {fileID: 1106087717}
   m_Layer: 5
   m_Name: StartButton
-  m_TagString: Untagged
+  m_TagString: StartButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1977,6 +1978,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1106087717}
+          m_MethodName: StopMusic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1106087716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,6 +2004,19 @@ MonoBehaviour:
   myFx: {fileID: 1144865097}
   hover: {fileID: 8300000, guid: 9acc3c263872d5c46aa46997e3e02940, type: 3}
   click: {fileID: 8300000, guid: c99bc48feb46ac246841e85ab3a601b3, type: 3}
+--- !u!114 &1106087717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106087709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971f48b61547635429327fdfbf41298c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameMusic: {fileID: 211314226}
 --- !u!1 &1109960679
 GameObject:
   m_ObjectHideFlags: 0

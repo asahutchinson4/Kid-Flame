@@ -57,6 +57,7 @@ public class takeDamageFireFighter : MonoBehaviour
         {
             Destroy(this.gameObject);
             fireCounter += 1;
+            SoundManager.playCheers();
         }
     }
 }

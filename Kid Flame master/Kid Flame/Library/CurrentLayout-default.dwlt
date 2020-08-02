@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17822
+  controlID: 19428
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 17827
+  controlID: 19429
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 17828
+  controlID: 19430
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 2ab6ffff84bbffffe6c0ffff3ac6ffffb8cbffff58d4ffffe8d9ffffeadcffffcce3ffff34eeffffd0f3ffffeef4fffffef4ffff6cfbffffb057000062910000a2910000ac910000be910000e8910000fc910000809200008a920000
+      m_SelectedIDs: 224e0100
+      m_LastClickedID: 85538
+      m_ExpandedIDs: 043fffffae47ffff304fffff7270ffff5276ffffcc76fffffc7cffff2a97ffffecb7ffffc8dbffff78eaffffc0eaffffa6f2ffff6cfbfffff4ffffffda720000247300003c73000080a100001aa20000d6cc00003acd00009a0e0100e60e0100020f01004a0f0100980f0100d80f0100804b01001a4c0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1093.656, y: 532.218, z: -4943.8735}
+    m_Target: {x: 332.20062, y: -4.448922, z: -5865.7188}
     speed: 2
-    m_Value: {x: 1093.656, y: 532.218, z: -4943.8735}
+    m_Value: {x: 332.20062, y: -4.448922, z: -5865.7188}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1640.2622
+    m_Target: 150.20602
     speed: 2
-    m_Value: 1640.2622
+    m_Value: 150.20602
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -696,21 +696,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Sounds
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Sounds
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Asa Hutchinson IV\Kid Flame Game\Kid-Flame\Kid Flame
     master\Kid Flame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 90}
-    m_SelectedIDs: a8ea0000
-    m_LastClickedID: 60072
-    m_ExpandedIDs: 00000000783c00007a3c00007c3c00007e3c0000803c0000823c0000843c000000ca9a3b
+    scrollPos: {x: 0, y: 150}
+    m_SelectedIDs: 52370000
+    m_LastClickedID: 14162
+    m_ExpandedIDs: 000000002e37000030370000323700003437000036370000383700003a37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -738,7 +738,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000783c00007a3c00007c3c00007e3c0000803c0000823c0000843c000000ca9a3b
+    m_ExpandedIDs: 000000002e37000030370000323700003437000036370000383700003a37000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

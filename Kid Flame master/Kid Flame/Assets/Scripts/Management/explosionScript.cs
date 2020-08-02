@@ -21,7 +21,6 @@ public class explosionScript : MonoBehaviour
         {
             Instantiate(explosionPrefab, spawnPoint.position, spawnPoint.rotation);
             Destroy(this.gameObject);
-
             health.GainHealth(15f);
         }
     }

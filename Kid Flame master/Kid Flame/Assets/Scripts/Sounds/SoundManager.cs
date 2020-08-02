@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Versioning;
 using UnityEngine;
 
 /*
@@ -8,13 +9,18 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
 
-    public static AudioClip fireBallSound;
     static AudioSource audioSrc;
+    public static AudioClip fireBallSound;
     public static AudioClip carBlowUp;
     public static AudioClip stamp;
     public static AudioClip theme;
     public static AudioClip hover;
     public static AudioClip click;
+    public static AudioClip waterPop;
+    public static AudioClip splash;
+    public static AudioClip sizzle;
+    public static AudioClip cheers;
+    public static AudioClip jump;
 
     /*
      * Start is called before the first frame update.
@@ -29,6 +35,11 @@ public class SoundManager : MonoBehaviour
         theme = Resources.Load<AudioClip>("ThemeSong");
         hover = Resources.Load<AudioClip>("Hover");
         click = Resources.Load<AudioClip>("Click");
+        waterPop = Resources.Load<AudioClip>("WaterPop");
+        splash = Resources.Load<AudioClip>("Splash");
+        sizzle = Resources.Load<AudioClip>("Sizzle");
+        cheers = Resources.Load<AudioClip>("Cheers");
+        jump = Resources.Load<AudioClip>("Jump");
     }
 
     /* 
@@ -65,5 +76,30 @@ public class SoundManager : MonoBehaviour
     public static void playClickSound()
     {
         audioSrc.PlayOneShot(click);
+    }
+
+    public static void playerWaterShot()
+    {
+        audioSrc.PlayOneShot(waterPop);
+    }
+
+    public static void playSplash()
+    {
+        audioSrc.PlayOneShot(splash);
+    }
+
+    public static void playSizzle()
+    {
+        audioSrc.PlayOneShot(sizzle);
+    }
+
+    public static void playCheers()
+    {
+        audioSrc.PlayOneShot(cheers);
+    }
+
+    public static void playJumpSound()
+    {
+        audioSrc.PlayOneShot(jump);
     }
 }
