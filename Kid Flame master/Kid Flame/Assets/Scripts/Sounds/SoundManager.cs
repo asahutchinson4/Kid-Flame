@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
     public static AudioClip sizzle;
     public static AudioClip cheers;
     public static AudioClip jump;
+    public static AudioClip fate;
 
     /*
      * Start is called before the first frame update.
@@ -40,6 +41,7 @@ public class SoundManager : MonoBehaviour
         sizzle = Resources.Load<AudioClip>("Sizzle");
         cheers = Resources.Load<AudioClip>("Cheers");
         jump = Resources.Load<AudioClip>("Jump");
+        fate = Resources.Load<AudioClip>("Fate");
     }
 
     /* 
@@ -101,5 +103,10 @@ public class SoundManager : MonoBehaviour
     public static void playJumpSound()
     {
         audioSrc.PlayOneShot(jump);
+    }
+
+    public static void playFateMusic()
+    {
+        audioSrc.PlayOneShot(fate);
     }
 }

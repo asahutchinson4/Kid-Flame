@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal") * moveSpeed);
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space) && !ShowUI.inDialogBox)
         {
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
             SoundManager.playJumpSound();

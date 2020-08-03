@@ -16,6 +16,8 @@ public class ShowUI : MonoBehaviour
     public PlayerMovement kidScript;
     public characterHealth health;
 
+    public static bool inDialogBox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,8 @@ public class ShowUI : MonoBehaviour
         DadBeg.SetActive(false);
 
         kidScript = KidFlame.GetComponent<PlayerMovement>();
+
+        inDialogBox = false;
     }
 
     void Update()
@@ -50,6 +54,7 @@ public class ShowUI : MonoBehaviour
         {
             kidScript.moveSpeed = 0f;
             kidScript.jumpVelocity = 0f;
+            inDialogBox = true;
         }
 
         if (col.gameObject.CompareTag("Kid Flame"));
