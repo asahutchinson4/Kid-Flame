@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask platformsLayerMask;
     public Transform player;
-    public float moveSpeed = 3f;
+    public float moveSpeed = 6f;
     public float jumpVelocity = 60f;
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxCollider2dGround;
@@ -53,7 +53,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             shootFireball();
-        } 
+        }
+
+        if (ShowUI.inDialogBox == false)
+        {
+            moveSpeed = 6f;
+            jumpVelocity = 60f;
+        }
     }
 
     /*

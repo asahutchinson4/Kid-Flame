@@ -12,6 +12,8 @@ public class ShowUI : MonoBehaviour
     public GameObject KidPain;
     public GameObject DadBeg;
     public GameObject KidFlame;
+    public GameObject Scream;
+    public GameObject Gratitude;
 
     public PlayerMovement kidScript;
     public characterHealth health;
@@ -28,6 +30,8 @@ public class ShowUI : MonoBehaviour
         DadAdmit.SetActive(false);
         KidPain.SetActive(false);
         DadBeg.SetActive(false);
+        Scream.SetActive(false);
+        Gratitude.SetActive(false);
 
         kidScript = KidFlame.GetComponent<PlayerMovement>();
 
@@ -45,12 +49,32 @@ public class ShowUI : MonoBehaviour
             Destroy(DadAdmit);
             Destroy(KidPain);
             Destroy(DadBeg);
+            Destroy(Scream);
+            Destroy(Gratitude);
+        }
+
+        if(Input.GetKeyDown(KeyCode.F) && inDialogBox == true)
+        {
+            Scream.SetActive(true);
+            Destroy(DadGreeting);
+            Destroy(KidIntro);
+            Destroy(DadApology);
+            Destroy(KidResponseToApology);
+            Destroy(DadAdmit);
+            Destroy(KidPain);
+            Destroy(DadBeg);
+            Destroy(Gratitude);
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) && inDialogBox == true && Fate.enableKeyS == true)
+        {
+            Gratitude.SetActive(true);
         }
     }
 
    public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Kid Flame")) ;
+        if (col.gameObject.CompareTag("Kid Flame"));
         {
             kidScript.moveSpeed = 0f;
             kidScript.jumpVelocity = 0f;
