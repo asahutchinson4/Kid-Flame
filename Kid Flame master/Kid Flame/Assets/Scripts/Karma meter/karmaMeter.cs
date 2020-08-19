@@ -4,6 +4,9 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 
+/*
+ * Class for karmameter of the HUD.
+ */
 public class karmaMeter : MonoBehaviour {
 
     private const float MAX_BAD = -174;
@@ -17,13 +20,20 @@ public class karmaMeter : MonoBehaviour {
     private float localOldVal;
     private float fireCount;
 
-    // Start is called before the first frame update
+    /*
+     * Start is called before the first frame update.
+     * Selts old values to zero.
+     */
     void Start()
     {
         localOldVal = 0;
         fireOldVal = 0;
     }
 
+    /*
+     * Finds needle gameobject and sets moral to zero and
+     * moralMax to 200.
+     */
     void Awake()
     {
         needleTransform = transform.Find("needle");
@@ -32,11 +42,17 @@ public class karmaMeter : MonoBehaviour {
         moralMax = 200f;
     }
 
-    // Update is called once per frame
+    /*
+     * Update is called once per frame.
+     * If dad dies then moral will be increased 
+     * by 175. If a firefighter is killed then moral is
+     * increased by 10 and if a local is killed then
+     * moral is increased by 21 (Sums are multiplied by
+     * Time.deltaTime * 4.0 to make the needle move with
+     * time quickly). Moral will never surpass its max.
+     */
     void Update()
     {
-        UnityEngine.Debug.Log("Moral: " + moral);
-
         if (takeDamageDad.dadCounter == 1)
         {
             moral += 175 * Time.deltaTime;
@@ -62,6 +78,9 @@ public class karmaMeter : MonoBehaviour {
         needleTransform.eulerAngles = new Vector3(0, 0, GetSpeedRotation());
     }
 
+    /*
+     * Getter for needle.
+     */
     private float GetSpeedRotation()
     {
         float totalAngleSize = MAX_GOOD - MAX_BAD;
@@ -71,12 +90,20 @@ public class karmaMeter : MonoBehaviour {
         return MAX_GOOD - moralNormalized * totalAngleSize;
     }
 
+    /*
+     * Waits for waitTime to allow engine
+     * to see the change in value for fireCounter.
+     */
     IEnumerator WaitForSecFire(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         fireOldVal = takeDamageFireFighter.fireCounter;
-    } 
-    
+    }
+
+    /*
+    * Waits for waitTime to allow engine
+    * to see the change in value for localCounter.
+    */
     IEnumerator WaitForSecLocal(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);

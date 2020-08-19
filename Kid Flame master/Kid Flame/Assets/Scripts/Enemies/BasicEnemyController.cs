@@ -74,7 +74,8 @@ public class BasicEnemyController : MonoBehaviour
      * Start is called before the first frame update.
      * Finds alive gameobject and gets rigidbody
      * and animator components. Sets facing direction
-     * to the right.
+     * to the right. Starts each game with all local's health
+     * at max.
      */
     private void Start()
     {

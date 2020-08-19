@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     /*
      * Start is called before the first frame update.
-     * Assigns rigidboyd and colliders.
+     * Assigns rigidboyd and colliders. Sets Kid Flames health
+     * to max.
      */
     private void Awake()
     {
@@ -39,7 +40,8 @@ public class PlayerMovement : MonoBehaviour
      * Update is called once per frame.
      * Gives him his speed and checks to see if he is touching the ground.
      * If he is touching the ground then he can jump. If F is pressed then
-     * he can shoot fireballs.
+     * he can shoot fireballs. If Kid Flame is outside of the dialog box
+     * then he will be able to move with the values below.
      */
     private void Update()
     {

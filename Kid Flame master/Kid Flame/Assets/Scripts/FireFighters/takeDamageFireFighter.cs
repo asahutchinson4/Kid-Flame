@@ -16,6 +16,10 @@ public class takeDamageFireFighter : MonoBehaviour
     float timer = 1f;
     float delay = 1f;
 
+    /*
+    * Start is called before the first frame update.
+    * Sets fire counter to zero.
+    */
     void Start()
     {
         fireCounter = 0;
@@ -43,7 +47,8 @@ public class takeDamageFireFighter : MonoBehaviour
      * Update is called once per frame.
      * If timer is done then firefighter will switch
      * back to idle sprite. If health equals 0
-     * then firefighter dissapears.
+     * then firefighter disappears, fire counter
+     * is added to and cheers sound is played.
      */
     void Update()
     {

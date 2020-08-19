@@ -31,7 +31,7 @@ public class HealthBar : MonoBehaviour
      * Update is called once per frame.
      * Assigning barsize. Setting bar size. If bar is below
      * 30% then it will change to the color red. If health 
-     * reaches 0 then the firefighter will dissapear.
+     * reaches 0 then the firefighter will disappear.
      */
     void Update()
     {
@@ -47,16 +47,6 @@ public class HealthBar : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-
-        checkBar();
-    }
-
-    //In progress function
-    private void checkBar()
-    {
-     
-
     }
 
     /*

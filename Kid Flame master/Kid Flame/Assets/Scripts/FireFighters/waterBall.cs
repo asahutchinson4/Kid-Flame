@@ -4,8 +4,7 @@ using System.Collections.Specialized;
 using UnityEngine;
 
 /*
- * Decides the direction the water projectile will go,
- * the speed of it and when it will be destroyed.
+ * Class for water projectiles.
  */
 public class waterBall : MonoBehaviour
 {

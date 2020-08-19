@@ -4,7 +4,7 @@ using System.Runtime.Versioning;
 using UnityEngine;
 
 /*
- * Manages all sound in the game.
+ * Manages most sound in the game.
  */
 public class SoundManager : MonoBehaviour
 {
@@ -53,58 +53,88 @@ public class SoundManager : MonoBehaviour
     }
 
     /*
-     * Plays sound when car blows up
+     * Plays sound when car blows up.
      */
     public static void playCarBlowUpSound()
     {
         audioSrc.PlayOneShot(carBlowUp);
     }
 
+    /*
+     * Plays stamp sound.
+     */
     public static void playStampSound()
     {
         audioSrc.PlayOneShot(stamp);
     }
 
+    /*
+     * Plays theme song.
+     */
     public static void playThemeSong()
     {
         audioSrc.PlayOneShot(theme);
     }
 
+    /*
+     * Plays hovering sound.
+     */
     public static void playHoverSound()
     {
         audioSrc.PlayOneShot(hover);
     }
 
+    /*
+     * Plays click sound.
+     */
     public static void playClickSound()
     {
         audioSrc.PlayOneShot(click);
     }
 
+    /*
+     * Plays water spray sound.
+     */
     public static void playerWaterShot()
     {
         audioSrc.PlayOneShot(waterPop);
     }
 
+    /*
+     * Plays splash sound.
+     */
     public static void playSplash()
     {
         audioSrc.PlayOneShot(splash);
     }
 
+    /*
+     * Plays sizzle sound.
+     */
     public static void playSizzle()
     {
         audioSrc.PlayOneShot(sizzle);
     }
 
+    /*
+     * Plays cheers sound.
+     */
     public static void playCheers()
     {
         audioSrc.PlayOneShot(cheers);
     }
 
+    /*
+     * Plays jump sound.
+     */
     public static void playJumpSound()
     {
         audioSrc.PlayOneShot(jump);
     }
 
+    /*
+     * Plays fate song.
+     */
     public static void playFateMusic()
     {
         audioSrc.PlayOneShot(fate);

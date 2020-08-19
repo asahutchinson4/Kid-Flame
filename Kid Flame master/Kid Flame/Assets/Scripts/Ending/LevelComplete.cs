@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/*
+ * Class for the win screen.
+ */
 public class LevelComplete : MonoBehaviour
 {
     public GameObject winScreen;
@@ -30,7 +34,10 @@ public class LevelComplete : MonoBehaviour
 
     Boolean stopSoundFromRepeating = false;
 
-    // Start is called before the first frame update
+    /*
+     * Start is called before the first frame update.
+     * Sets all gameobjects to false.
+     */
     void Start()
     {
         winScreen.SetActive(false);
@@ -48,7 +55,15 @@ public class LevelComplete : MonoBehaviour
         psychopath.SetActive(false);
     }
 
-    // Update is called once per frame
+    /*
+     * Update is called once per frame.
+     * If key S is enabled and pressed then the game
+     * will prepare for the spared win screen. If key F
+     * is enabled and pressed or if dad is dead then the 
+     * game prepares for the killed win screen. Then depending
+     * on the Kid Flame's moral meter, two strings will appear
+     * to represent the player's performance.
+     */
     void Update()
     {
 
@@ -119,18 +134,28 @@ public class LevelComplete : MonoBehaviour
         fireScore.text = takeDamageFireFighter.fireCounter.ToString();
     }
 
+    /*
+     * Waits for needle to move was dad was killed.
+     */
     IEnumerator WaitForNeedleKilled()
     {
         yield return new WaitForSeconds(2);
         winScreen.SetActive(true);
     }
-    
+
+    /*
+    * Waits for needle to move was dad was spared.
+    */
     IEnumerator WaitForNeedleSpared()
     {
         yield return new WaitForSeconds(1);
         winScreen.SetActive(true);
     }
 
+    /*
+     * Waits then plays stamp sound and sets
+     * killed stamp active.
+     */
     IEnumerator DadWasKilled()
     {
         yield return new WaitForSeconds(4);
@@ -138,6 +163,10 @@ public class LevelComplete : MonoBehaviour
         killedStamp.SetActive(true);
     }
 
+    /*
+     * Waits then plays stamp sound and sets
+     * spared stamp active.
+     */
     IEnumerator DadWasSpared()
     {
         yield return new WaitForSeconds(4);

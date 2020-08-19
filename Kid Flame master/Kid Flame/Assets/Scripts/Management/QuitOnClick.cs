@@ -8,12 +8,11 @@ using UnityEngine;
  */
 public class QuitOnClick : MonoBehaviour
 {
+    /*
+     * Quits program/
+     */
   public void Quit()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit;
-#endif
+      Application.Quit();
     }
 } 

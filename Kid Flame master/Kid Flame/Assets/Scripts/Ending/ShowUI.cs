@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Shows UI elements at the end of the game.
+ * All dialog components.
+ */
 public class ShowUI : MonoBehaviour
 {
     public GameObject KidIntro;
@@ -20,7 +24,12 @@ public class ShowUI : MonoBehaviour
 
     public static bool inDialogBox;
 
-    // Start is called before the first frame update
+    /*
+     * Start is called before the first frame update.
+     * Sets all gameobjects to false. Sets player movement
+     * script equal to kidScript and makes inDialogBox equal
+     * false.
+     */
     void Start()
     {
         KidIntro.SetActive(false);
@@ -38,6 +47,15 @@ public class ShowUI : MonoBehaviour
         inDialogBox = false;
     }
 
+    /*
+     * Update is called once per frame.
+     * If dad's health quals zero then all gameobjects
+     * will be destroyed. If key F is pressed and Kid Flame is
+     * in the dialog box then activate scream and destroy all
+     * other gameobjects. If key S is enabled and pressed and
+     * Kid Flame is in the dialog box then activate gratitude
+     * gameobject.
+     */
     void Update()
     {
         if (health.currentHealth == 0)
@@ -71,7 +89,12 @@ public class ShowUI : MonoBehaviour
             Gratitude.SetActive(true);
         }
     }
-
+    
+    /*
+     * Once Kid Flame enters the dialog box he will
+     * not be able to move. Then Coroutines and IEnumerators
+     * begin that show dialog between dad and Kid Flame.
+     */
    public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Kid Flame"));

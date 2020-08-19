@@ -18,6 +18,10 @@ public class takeDamage : MonoBehaviour
     float timer = 1f;
     float delay = 1f;
 
+    /*
+     * Start is called before the first frame update.
+     * Sets local counter to zero.
+     */
     void Start()
     {
         localCounter = 0;
@@ -25,7 +29,7 @@ public class takeDamage : MonoBehaviour
   
     /*
      * If a bullet collides with local then
-     * he will lose 50 health points and will
+     * he will lose 25 health points and will
      * display hurt sprite.
      */
     public void OnCollisionEnter2D(Collision2D col)
@@ -45,7 +49,9 @@ public class takeDamage : MonoBehaviour
      * Update is called once per frame.
      * If timer is done then local will switch
      * back to idle sprite. If health equals 0
-     * then local dissapears.
+     * then local dissapears. If the local's health equals
+     * zero then local counter is added to and the cheers
+     * sound plays.
      */
     void Update()
     {

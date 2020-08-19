@@ -80,14 +80,16 @@ public class FireFighterController : MonoBehaviour
 
 
     public float speed;
- 
+
     /*
      * Start is called before the first frame update.
      * Finds firefighter gameobject and gets rigidbody
      * and animator components. Sets facing direction
-     * to the right.
+     * to the right. Sets water projectile's velocity to
+     * speed times this firefighter's facing direction.
+     * Starts each game with all firefighter's 
+     * health at max.
      */
-
     private void Start()
     {
         fireMan = this.gameObject;
@@ -125,7 +127,8 @@ public class FireFighterController : MonoBehaviour
      * firefighter will use stop moving
      * and then fire water projectiles.
      * Timer is added and speed interval
-     * is adjustable. Else if ground, wall
+     * is adjustable. Else if ground, wall,
+     * local, firefighter
      * or car is detected then he will turn
      * around. If not any then he continues.
      */
@@ -161,7 +164,7 @@ public class FireFighterController : MonoBehaviour
             }
         }
 
-        else if (!groundDetected || wallDetected || carDetected || localDetected || localDetected || fireManDetected)
+        else if (!groundDetected || wallDetected || carDetected || localDetected || fireManDetected)
         {
             flip();
         }
@@ -173,7 +176,7 @@ public class FireFighterController : MonoBehaviour
     }
 
     /*
-     * Shoots water projectiles
+     * Shoots water projectiles to the right and plays sound.
      */
     private void sprayWater()
     {
@@ -183,6 +186,9 @@ public class FireFighterController : MonoBehaviour
         SoundManager.playerWaterShot();
     }
 
+    /*
+     * Shoots water projectiles to the left and plays sound.
+     */
     private void sprayWaterLeft()
     {
         Instantiate(WaterPrefab, sprayPoint.position, sprayPoint.rotation);
@@ -202,7 +208,7 @@ public class FireFighterController : MonoBehaviour
     }
 
     /*
-     * Stops firefighter from moving
+     * Stops firefighter from moving.
      */
     private void stop()
     {
@@ -211,7 +217,7 @@ public class FireFighterController : MonoBehaviour
     }
 
     /*
-     * Draws line used for detection
+     * Draws line used for detection.
      */
     private void OnDrawGizmos()
     {

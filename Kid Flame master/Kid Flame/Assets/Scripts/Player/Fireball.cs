@@ -22,8 +22,6 @@ public class Fireball : MonoBehaviour
         rb.velocity = new Vector2(speed, 0);
     }
 
-
-
     /* 
      * Update is called once per frame.
      * If the fireball is off screen then it is destroyed.

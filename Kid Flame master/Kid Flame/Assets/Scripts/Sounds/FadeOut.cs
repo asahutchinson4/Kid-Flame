@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
+
+/*
+ * Fades out music for when you find your dad.
+ */
 public class FadeOut : MonoBehaviour
 {
 
@@ -12,13 +16,14 @@ public class FadeOut : MonoBehaviour
 
     private bool fadeOut = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    /*
+     * Update is called once per frame.
+     * If audio volume is equal to or below zero
+     * then the level music is destroyed. If fade out
+     * equals true and the volume is above zero then 
+     * the music will slowly fade out until the volume
+     * reaches zero/it has been destroyed.
+     */
     void Update()
     {
         if(audio.volume <= 0.0f)
@@ -36,6 +41,10 @@ public class FadeOut : MonoBehaviour
         }
     }
 
+    /*
+     * If Kid Flame enters the fade out box then
+     * fade out is set to true.
+     */
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Kid Flame"))

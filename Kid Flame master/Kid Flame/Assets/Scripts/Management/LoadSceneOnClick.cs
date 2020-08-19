@@ -9,6 +9,10 @@ using UnityEngine.SceneManagement;
 public class LoadSceneOnClick : MonoBehaviour
 {
     
+    /*
+     * Will load particular scene of your
+     * choosing.
+     */
     public void LoadSceneByIndex(int index)
     {
         SceneManager.LoadScene(index);

@@ -14,6 +14,7 @@ public class explosionScript : MonoBehaviour
 
     /*
      * If fireball collides with car then it blows up.
+     * Kid Flame gains 15 health points.
      */
     public void OnCollisionEnter2D(Collision2D col)
     {

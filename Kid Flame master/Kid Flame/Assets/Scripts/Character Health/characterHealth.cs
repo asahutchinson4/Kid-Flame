@@ -38,6 +38,9 @@ public class characterHealth : ScriptableObject
 
     }
 
+    /*
+     * Adds to current health.
+     */
     public void GainHealth(float amount)
     {
         currentHealth += amount;

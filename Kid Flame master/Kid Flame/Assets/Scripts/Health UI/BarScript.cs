@@ -23,6 +23,8 @@ public class BarScript : MonoBehaviour
      * healthbar's fill amount to how much
      * health kid flame has. If health bar is below
      * 40% then the filler will change colors to blue.
+     * If health bar goes back above 40% or equals it then
+     * the filler will change back to red.
      */
     void Update()
     {
