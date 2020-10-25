@@ -13,5 +13,8 @@ I learned a lot about different concepts of game development such as scriptable 
 # Contributers
 My only contributer was my school advisor, Dr. Branton. One of the hardest parts of this project was learning how to use scriptable objects for the health system. I spent a lot of time trying to make this work, but was not able to to do it on my own. I reached out to Dr. Branton for help and he was a big reason why I was able to do it. 
 
+# Build
+If you try to build this game you will not be able to play it unless you are on a 32 inch monitor. This was an enormous learning experience for me and as a result I foolishly set the canvas of my main menu to constant pixel size. In the future, I will definitely make the canvas scale to the player's screen size but for now this is the limitation.
+
 
 
