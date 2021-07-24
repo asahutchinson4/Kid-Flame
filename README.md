@@ -7,7 +7,7 @@ I started this project for my foundations of game development course. Our goal w
 # Backstory/Story
 Kid Flame is a 2D platformer where you play as Felix Nicks, a 10 year old boy that goes out shopping with his father. As Felix waited for his father, Judas Nicks, in the car for hours, the car continually got hotter and Felix's body couldn't take it anymore. His skin bursted into flames which began his mutation into Kid Flame. The goal of the game is to find your father and decide what to do with his life.
 
-# What I learned
+# What I Learned
 I learned a lot about different concepts of game development such as scriptable objects, particle systems, UI, prefabs, and so much more. I got a lot better at coding in the language C# and working in the Unity Engine. But more importantly, I learned how to problem solve and be persistent. Sometimes I would be trying to work through a problem for 10+ hours and I would never give up on it. I would try to figure out all the places the problem could be, isolate it and then attempt to fix it. If it did not work then I would move to the next potential location of the problem. I would become obsessive over my game's problems and would not stop until it was fixed. I also learned about myself in this process. I learned how determined I am and how passionate I am about making games. To anyone else, this might sound like a miserable grind but to me this was an incredible experience that I look fondly upon.
 
 # Contributors
