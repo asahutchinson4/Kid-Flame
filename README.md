@@ -1,7 +1,7 @@
 # Kid-Flame
 My first full unity game called Kid Flame. I started this project second semester of my sophomore year of college. I finished it the next summer.
 
-![Main Menu Gif](Kid-Flame/KidFlamemaster/GIFS/main_menu.gif)
+![Main Menu Gif](Kid Flame master/GIFS/main_menu.gif)
 
 # Overview of Project
 I started this project for my foundations of game development course. Our goal was to incorporate what we had learned into a playable game. My classmates nor I were able to finish our games given our time limit so I continued the project throughout the summer. My goal was to create a game on my own that could be completed with the basic aspects found in games played today. I did not create the border for the karma meter, my school advisor, Dr. Branton, helped me with parts of the health system and all the sound from the game was downloaded off the internet. Everything else was created and thought of by me.  While taking two online classes and working out/practicing basketball for my University, I exhibited my passion, discipline and eagerness to learn by giving this project countless hours of my freetime. 
