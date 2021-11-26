@@ -3,7 +3,7 @@ My first full game using the Unity engine called Kid Flame. I started this proje
 
 ![Main Menu Gif](GIFS/main_menu.gif)
 ![Gameplay Gif](GIFS/gameplay_1.gif)
-![Gameplay 2 Gif](GIFS/gameplay_2.gif)
+![Next Gameplay Gif](GIFS/gameplay_2.gif)
 ![Ending Gif](GIFS/ending.gif)
 ![End Screen Gif](GIFS/end_screen.gif)
 
