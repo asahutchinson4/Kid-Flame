@@ -1,5 +1,5 @@
 # Kid-Flame
-My first full unity game called Kid Flame. I started this project second semester of my sophomore year of college. I finished it the next summer.
+My first full game using the Unity engine called Kid Flame. I started this project second semester of my sophomore year of college. I finished it the next summer.
 
 ![Main Menu Gif](GIFS/main_menu.gif)
 
